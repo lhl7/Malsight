@@ -13,6 +13,7 @@
 
 ## Models
 + Code Sequence Labeling Model [HF Link](https://huggingface.co/phruit/csl_model)
++ Code Summarization Model [HF Link](https://huggingface.co/phruit/codet5p-770m)
 
 ## Datasets
 
