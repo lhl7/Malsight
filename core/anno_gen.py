@@ -12,8 +12,8 @@ from openai import OpenAI
 from langchain.prompts import PromptTemplate
 
 
-os.environ["OPENAI_API_BASE"] = 'https://oneapi.xty.app/v1'
-os.environ["OPENAI_API_KEY"] = 'sk-oJV4beZx7PPhTB2u165cD3333f45436e9157DdF7B20631Ef'
+os.environ["OPENAI_API_BASE"] = 'URL'
+os.environ["OPENAI_API_KEY"] = 'sk-xxxxx'
 # print(os.environ)
 
 # proxy = 'http://127.0.0.1:15777'
