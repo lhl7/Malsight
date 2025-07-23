@@ -11,16 +11,12 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 # Code Summarization Model
 
-model_path = '/home/lhl/projects/models/hf/codet5p-770m'
-# ft_model_path = '/home/lhl/projects/models/hf/BinT5-Demi'
-ft1_model_path = '/home/lhl/projects/checkpoints/ft1_codet5p-770m/encoder_only/longer_label/checkpoint-625'
-# ft_model_path = '/home/lhl/projects/checkpoints/ft1_codet5p-770m/encoder_only/6w/checkpoint-625'
-ft0_model_path = '/home/lhl/projects/checkpoints/ft0_codet5p-770m/checkpoint-1666'
-ph2_only = '/home/lhl/projects/checkpoints/ph2_only_codet5p-770m/checkpoint-625'
-test = '/home/lhl/projects/checkpoints/diff_ratio/1:2/p2/checkpoint-972'
+model_path = 'MODEL_PATH'
+
+
 
 csum_tokenizer = AutoTokenizer.from_pretrained(model_path)
-csum_model = AutoModelForSeq2SeqLM.from_pretrained(ft1_model_path).cuda()
+csum_model = AutoModelForSeq2SeqLM.from_pretrained(model_path).cuda()
 
 csum_model.config.decoder_start_token_id = csum_tokenizer.bos_token_id
 csum_model.config.pad_token_id = csum_tokenizer.pad_token_id
