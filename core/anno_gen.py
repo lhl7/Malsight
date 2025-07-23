@@ -22,10 +22,10 @@ os.environ["OPENAI_API_KEY"] = 'sk-xxxxx'
 
 
 client = OpenAI(
-    base_url="https://api.xty.app/v1", 
+    base_url="URL", 
     api_key=os.getenv("OPENAI_API_KEY"),
     http_client=httpx.Client(
-        base_url="https://api.xty.app/v1",
+        base_url="URL",
         follow_redirects=True,
     ),
 )
