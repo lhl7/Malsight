@@ -1,0 +1,79 @@
+Executes a cmd command to delete shadow copies, followed by an API call to empty the Recycle Bin to prevent recovery of deleted files.
+Traverses local drives, creates a new object and allocates memory for the program.
+To ensure uninterrupted encryption during system encryption processes, the malware enumerates and retrieves all available services on the victim's machine, attempting to terminate services before encrypting the system. API call sequence: OpenSCManagerA (Open Service Control Manager Database) --> OpenServiceA (Open a target service) --> QueryServiceStatusEx (Retrieve current service status) --> EnumDependentServicesA (Retrieve names and statuses of each service dependent on the specified service) --> ControlService (Terminate service)
+Operations related to processes. API call sequence: CreateToolhelp32Snapshot (Get current running process snapshot) --> Process32FirstW (Get the first process handle) --> Compare with processes in the lpString1 list using lstrcmpW, if a match --> OpenProcess (Open specified process handle) --> TerminateProcess (Terminate process) and CloseHandle (Close process handle) --> Process32NextW (Continue to the next process)
+Core encryption operation. First, SetFileAttributesW() is used with parameter 0x80 to remove read-only, hidden, system, and archive permissions from documents. Then, MoveFileExW is used to append the .crypt extension to the encrypted files. The file to be encrypted is opened, and encryption begins. A random AES key is generated using CryptGenRandom, and the AES key is encrypted using an RSA public key from unk_4141B8. Encryption process: encrypts bytes 0-64, then 64-5242880, then 5242880-20971520, and finally encrypts characters after 20971520.
+Operations related to ransom note generation. The buffer contains the content of the ransom note. Filters out directories and files not to be encrypted; files with extensions exe, dll, and babyk are excluded from encryption.
+Uses the NetShareEnum() API to retrieve information about each shared resource on the server, checking for the $ADMIN share and beginning file encryption.
+Calls GetDriveTypeW() API to identify network drives connected to the infected machine. Once network drives are identified, the ransomware starts encrypting files.
+Obtain addresses of necessary API functions.
+Modify a file by adding a Bitcoin account inside.
+Set the current process directory to a registry entry.
+Allocate a block of heap space and write the decrypted DLL file to the beginning of the heap space.
+Open a file, then decrypt the file, converts a string to binary.
+Extract files and language pack to the working directory
+Releases the actual ransomware file. Releases virus samples (exe and dll modules) from the application's resource section and places them in the C:\Windows directory to disguise them as system programs.
+Retrieves the virus file path, establishes a connection to the Service Control Manager, opens the mssecsvc2.0 service, modifies the server description, registers the service, creates and starts the mssecsvc2.0 service, and launches tasksche.exe.
+Initializes TCP communication and attempts external network 445 port vulnerability infection.
+After network initialization, propagates through vulnerabilities using internal and external IP addresses.
+Accesses the link 'http://www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com/', which is a web server, initiating malicious code service.
+Attempts internal network 445 port vulnerability infection.
+Traverses and terminates listed processes to prevent file usage during encryption.
+Injection process during encryption, injecting into the system advapi32.dll file.
+Initiates an HTTP request operation. First, adds HTTP request header parameters using the HttpAddRequestHeadersW function. Then, sends an HTTP request using the HttpSendReqst function and retrieves the HTTP response. If HttpSendRequestW returns true, continues to retrieve response data from the network resource using the InternetReadFile function with the specified HTTP connection handle. The read data is stored in the buffer pointed to by v16, and the number of bytes read is a7 - 1. Also returns the complete server name to lpszServerName. The result of the function is used to determine if the HTTP request was successful. If successful, continues to retrieve data from the network resource; if failed, retrieves error information using the GetLastError function.
+Initiates an outbound connection to a malicious domain via a GET request.
+Checks current user group, location, operating system, system version number, CPU information, and disk type and capacity through registry.
+Deletes shadow copies to prevent users from recovering original files.
+Encrypts all files in the directory by traversing them using FindFirstFileW and FindNextFileW interfaces, and releases the ransom note.
+Initiates an outbound connection to a malicious domain via a POST request.
+Generates RSA public/private key pair using CryptGenKey and then exports them using CryptExportKey.
+Traverses disks and creates a thread to encrypt files based on traversal results.
+Launches a .bat file, run some command lines to allocate some memory.
+Executes a deletion operation using ShellExecuteExW to delete itself.
+Registry-related function; subkey is used to add auto-start items.
+Creates a .bat file. The functionality of this .bat file is to delete shadow copies and clear remote login logs.
+RSA encryption function to handle with some differrent strings .
+Generates RSA key pair, performs various operations related to data manipulation in memory.
+Writes a file under the public folder with the content of the user ID encrypted using RSA.
+Release a DLL in the system directory and start the DLL using rundll32
+Alter the screen display and replicate software interfaces on the desktop
+Enumerate child windows and perform deformation operations on them
+Obtain a handle to the key container and generate random bytes for a password.
+perform deformation operations on child windows
+Playing sound during virus execution.
+If the value of `code` is 3, this code segment will operate on a specific message window.
+Inject keyboard events and monitor keyboard activity.
+Retrieve and set the mouse position
+Escalating the privileges of the virus process
+Send message to windowsm, sends a message to a window, removes a specific character.
+Change the color of the desktop, releases the window context.
+Interface resizing, desktop distortion.
+Randomly opening websites in the browser
+Infinite loop execution, with a 10-millisecond interval between each execution. During each iteration, it enumerates all child processes and counts the number of child processes whose executable paths match that of the main process's virus path. If this count is lower than the count from the previous execution, it calls sub_401021 to escalates privileges.
+Path comparison and performs bitwise operations.
+Setting up six timers from the PCI device in a Linux.
+Infecting other files, The code defines a function that takes a pointer to a buffer structure and an integer as arguments, calculates the offset of the buffer structure, and checks for overflow before returning the final offset.
+Reading file into memory
+Obtaining system directory
+Searching for virus processes and terminating them if found
+Setting infected file as normal, copying itself as the infected file, appending source file to the end of a new file
+Modifying virus registry startup items, setting as hidden
+Deleting shares via cmd command
+Checking if autorun.ini file exists; if not, creating it and configuring it to auto-run setup.exe as specified in the configuration file
+Virus self-replication
+Search for specified file paths.
+Read the process filename
+Terminate related processes and parameters processes from the command line.
+Connect to a malicious domain and make a request to retrieve data using HTTP.
+Create a file and set its attributes to hidden, then retrieve and save the path and name of the current executable file.
+Create a file and set its attributes to hidden, then retrieve and save the path and name of the current executable file.
+Retrieve user information and concatenate paths.Open the ransom note using Notepad.
+System information detection, folder traversal, and file encryption
+map itself into dynamic memory
+Traverse the entire resource data to locate the DCDATA resource.
+The code defines a function that redraws elements such as buttons or tracks based on internal state changes or user interactions, and returns the result.
+Validate the loaded resources to determine if they have been loaded correctly.
+open/create a key-value pair in TLS situation.
+assign a value to the opened/created key, The function translates escape sequences into corresponding key codes or actions for input processing in a text or command-line interface.
+The code defines a function that reads a 64-bit unsigned integer from a specific offset within the FS segment register on x86 architecture, potentially to access thread-local storage or other system-specific data structures, and then formats and writes the result to a buffer with a specified size limit.decrypt resources using the I/O operations, 
+Create/open the 'Software' directory in the current user's home directory, then create/open the 'DC3_FEXEC' folder and create a time-hardware configuration file information serial number key-value pair.

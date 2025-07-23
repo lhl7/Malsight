@@ -1,0 +1,502 @@
+The function int __cdecl close(int fildes) infects a file with a virus by creating a temporary file, copying the virus to the temporary file, and then deleting the temporary file.
+The function `infectWithVirus` takes three arguments: `fd`, `fdTemp`, and `argv`. It reads the contents of the file descriptor `fdTemp` and writes it to the file descriptor `fd`. It then reads the contents of the file descriptor `fd` and writes it to a file with the name specified in `argv`.
+The function void __fastcall ft_putchar(char c) writes the character c to the console and updates the stack frame.
+The function takes two arguments, a1 and a2, and checks if the bytes in the memory location a1, up to the byte at index a2, are all printable ASCII characters.
+The function checks if any of the first `a2` bytes of memory starting at address `a1` contain control characters (ASCII values 0-31 or 127).
+The function checks if a byte array contains a newline character (10 or 13).
+The function parses a string of comma-separated frequency ranges and returns a list of 8-byte integers representing the start and end frequencies for each range.
+The function compares two 32-bit integers stored in memory, returning 1 if the first integer is greater than the second, 0 if they are equal, or 0xFFFFFFFF if the first integer is less than the second.
+The function sorts and removes duplicates from an array of 32-bit integers.
+The function clears and frees a string.
+The function clears and frees a block of memory.
+Generates a random MAC address.
+The function generates a random MAC address with the first three bytes set to the OUI (Organizationally Unique Identifier) of the device.
+The function h_puthex takes an unsigned 8-bit integer c and prints its hexadecimal representation using two characters.
+The function takes two arguments, a1 and a2, and parses a string from a1 into a2.
+The function adds an element to a list by storing a pointer to the element in the list and updating the list's head pointer.
+The function clears the current line by printing a newline character and then spaces until the length of the command buffer plus two is reached.
+The function moves the cursor left in the command buffer.
+The function moves the cursor to the right in the command buffer.
+Moves the cursor left by one word in the command buffer.
+Moves the cursor to the right until it reaches a space or the end of the command buffer.
+The function deletes the leftmost character in the command buffer and updates the buffer's position and length.
+The function deletes the current character in the command buffer.
+The function deletes the word at the cursor position in the command buffer.
+The function prints the register status of a process, including the values of the registers and whether they are valid or not.
+The function clears the left part of the command buffer and moves the remaining text to the left.
+The function clears the right side of the command buffer and redraws the line if necessary.
+The function `history_add` adds a new string to a linked list of strings, and returns a pointer to the added string.
+The function edits the current command in the command history by clearing the current line, copying the history command to the command buffer, and redrawing the command line.
+The function `history_prev()` moves the cursor to the previous command in the history list and returns the command string.
+The function navigates through the history of commands entered in the shell, returning the previous command if available.
+The function writes the history list to a file.
+The function dumps the history of commands entered in the console, along with the current command if it is not the last one.
+The function inserts a character into the command buffer.
+The function intprocess_cmd() processes the command buffer, adding it to the history and executing it if necessary.
+The function `print_mem` takes a `t_vm*` pointer as an argument and prints the contents of the `memory` and `owner` arrays of the `vm` structure.
+The function frees memory allocated by the `os_malloc` function.
+The function takes three arguments: a1, a2, and a3. The function filters a1, which is a list of strings, and returns a new list with only the strings that match a2, which is a substring, and are of length a3.
+The function takes an array of strings as input and returns the maximum common length of all strings in the array.
+The function takes a character as input and returns a 64-bit integer based on the character's ASCII value.
+Converts a character to a key code.
+The function takes a char argument and returns a 64-bit integer based on the character's ASCII value.
+The function takes a character `chara1` and returns a 64-bit integer based on the character's ASCII code.
+The function takes a character as input and returns a 64-bit integer based on the character's ASCII code.
+The function takes three integers and a character, and returns a 64-bit integer based on the values of the integers and the character.
+The function takes three integer arguments and returns a 64-bit integer. The function first checks if any of the arguments is negative, and if so, returns a specific value. If all arguments are non-negative, the function subtracts 70 from the third argument and checks if the result is less than or equal to 0xD. If the result is less than or equal to 0xD, the function jumps to a specific address using the `__asm` keyword. Otherwise, the function returns a specific value.
+The function dumps the memory of a virtual machine in a hexadecimal format.
+The function takes a string and checks if it's an escape sequence. If it is, it returns the corresponding key code. If it's not, it clears the line and prints an error message.
+The function reads a single character from a file descriptor, and if it's an escape sequence, it returns the corresponding key code. If it's not an escape sequence, it returns the character code.
+The function redraws the search results on the screen.
+The function intsearch_stop() stops the search and copies the found string to the command buffer.
+The function intsearch_backspace() deletes the last character in the search buffer and redraws the search prompt.
+The function searches for a character in a buffer and returns the index of the first occurrence.
+The function takes an unsigned int a1 as input and returns 256LL. If a1 is between 258 and 0x1F, it jumps to rax. If a1 is between 0x1F and 0xFF, it calls the search_char function with a1 as an argument. Otherwise, it returns 256LL.
+The function reads a character from the keyboard and returns it, or 0 if no character is available.
+The function deinitializes the history system by writing the history to a file, clearing the line, and unregistering the read socket.
+The function redraws the command prompt and updates the command buffer.
+Loads a character file into a virtual machine.
+The function prints a string to the console using `printf`.
+The function adds a socket to a table and reallocates memory for the table if necessary.
+The function sets the file descriptors in a table based on the values in the first argument.
+The function takes two arguments, a1 and a2, and performs a loop on the elements of a1, calling a function at each iteration if the element is not null and the corresponding bit in a2 is set. The function also sets a1's 20th element to 0 if it is not already 0.
+The function destroys a socket table and prints a message for each remaining socket.
+Registers a socket with the event loop.
+The function registers a timeout with a specified interval and returns 0 if successful, or 0xFFFFFFFFLL if the timeout is too long.
+Cancels timeouts in a loop based on three parameters.
+The function cancels a timeout for a given task, returning 1 if the timeout was successfully canceled and 0 otherwise.
+The function checks if a timeout is registered for the given parameters a1, a2, and a3.
+The function adds a new job to a linked list with a specified interval.
+The function fastcalleloop_deplete_timeout() checks if a timeout has been reached, and if so, cancels the timeout and registers a new one with a different timeout value.
+The function fastcalleloop_replenish_timeout() checks if a timeout has occurred, and if so, cancels the timeout and registers a new one with a different timeout value.
+The function handles an alarm signal by printing an error message and exiting the program forcefully.
+The function handles a signal by setting an alarm and incrementing a counter.
+The function processes pending signals by setting the alarm to 0, looping through a series of instructions, and returning the result.
+The function registers a signal handler for the signal with the specified ID, and returns 0 on success or 0xFFFFFFFFLL on failure.
+Registers a signal handler for SIGINT and SIGTERM.
+The function `eloop_run` is a loop that runs until a condition is met. It initializes three sets of file descriptors, reads from them, and processes the results.
+The function eloop_destroy() destroys the event loop and frees the resources allocated for it. It removes all timeouts, sockets, and other data associated with the event loop, and then frees the memory allocated for the event loop.
+The function takes two arguments a1 and a2, and if a1 is non-zero, it calls the sleep function with a1 as the argument, and if a2 is non-zero, it calls the usleep function with a2 as the argument.
+Removes a job from the task list by finding the earliest deadline task node and updating the list accordingly.
+The function gets the current time in milliseconds and returns it as an unsigned integer.
+The function gets the current time in milliseconds and stores it in the struct timeval pointed to by a1.
+The function converts a date and time to a time_t value.
+The function takes a time_t argument and returns an array of integers representing the time components (second, minute, hour, day, month, year) in the Gregorian calendar.
+The function daemonizes the current process by calling the daemon() function and then writes the process ID to a file if specified.
+Generates random bytes using /dev/urandom.
+Compares two memory blocks of size a3, returning 0 if they are equal, otherwise the difference between the first mismatching bytes.
+Compares two strings and returns an unsigned integer representing their difference.
+Compares two strings up to a specified length.
+Copies a3 bytes from a2 to a1, returning the number of bytes copied.
+The function `run_scheduler` runs a task scheduler that schedules tasks based on their deadlines. The function checks if the current task should be run, and if so, it runs the task and updates the task's remaining time. It then checks if there are any other tasks that need to be run and schedules them accordingly.
+Compares the contents of two memory regions, returning a bitmask indicating the differences between them.
+The function os_snprintf takes a string, a length, and a format string, and returns the number of characters written to the string.
+The function `os_exec` takes a path, a command, and a flag as arguments and forks a new process to execute the command. The function returns 0 on success and -1 on failure.
+The function reads the current timestamp and prints it to the console.
+The function wpa_printf() is a variadic function that prints a formatted string to the console, with the ability to include up to 6 arguments. The function also includes a debug level check, which allows for conditional printing based on the current debug level.
+The function wpa_hexdump() takes five arguments: a1, a2, a3, a4, and a5. It prints a hexdump of the data pointed to by a3, with a length of a4, and a label of a2. If a3 is NULL, it prints "[NULL]". If a3 is not NULL, it prints the hexadecimal values of the bytes in the buffer, with a maximum of a4 bytes.
+The function `wpa_hexdump_ascii` takes five arguments: `a1`, `a2`, `a3`, `a4`, and `a5`. It returns an integer value.
+The function `wpa_msg` takes a variable number of arguments and formats them into a message string. The message is then printed to the console using `wpa_printf`. The function also allocates memory for the message string and frees it after printing.
+The function wpa_msg_ctrl() takes a variable number of arguments and uses them to format a message using the vsnprintf() function. The message is then passed to the wpa_msg_cb() callback function, which is responsible for handling the message. If the message cannot be allocated, an error message is printed using wpa_printf().
+The function wpa_msg_global takes a format string, a message type, and a variable number of arguments, and prints the formatted message to the console. The function also calls a callback function if one is provided.
+The function sleeps for a specified number of milliseconds by converting it to nanoseconds and using the `nanosleep` system call.
+The function takes a string and returns a debug level based on the string's value.
+The function copies data from a2 to a1, where a1 is a pointer to a WPA buffer, and a2 is a pointer to the data to be copied, and a3 is the number of bytes to be copied.
+The function copies the contents of a WPA buffer to another buffer.
+The function resizes a wpabuf buffer by reallocating its memory and copying its contents.
+Allocates a buffer for external data with a size of 32 bytes and initializes it with the given values.
+The function frees a buffer.
+The function clears the contents of a WPA buffer and frees the memory.
+The function takes two arguments, a1 and a2, and returns the sum of the two arguments.
+The function wpabuf_printf() takes a pointer to a wpabuf structure, a format string, and a variable number of arguments, and writes the formatted string to the wpabuf structure.
+The function takes two __int64 parameters, a1 and a2, and adds a2 to the linked list pointed to by a1.
+The function intopen(const char*path, int oflag, ...) opens a file at the specified path with the specified flags and mode. If the oflag includes the 0x40 flag, the mode argument is used to set the file mode. The function checks for viruses in the file and hides them if present.
+The function returns the current time in milliseconds by reading the system clock and converting it to milliseconds.
+The function frees a client socket and related resources, including closing the socket and freeing any allocated memory.
+The function frees a pointer to a pointer to an integer, and returns the freed pointer.
+The function frees a block of memory allocated by the client.
+The function daemonize() creates a new process group and sets the process mask to 0, allowing the process to run in the background.
+The function sets up signal handling, checks the path, daemonizes, replicates, sets a lock, creates a server, handles connections, destroys the server, and unsets the lock.
+The function initializes a 64-bit integer variable with a random value and sets some other memory locations to specific values.
+The function `key_exchange` takes two arguments, `a1` and `a2`, and performs a key exchange operation using the values in `a1` and `a2`. It generates a random number, checks if it is prime, and if it is not prime, it generates another random number and checks again. If the number is prime, it calculates the modular exponentiation of two large numbers and stores the result in `a1+40`. It then converts the result to a string and writes it to the file pointer stored in `a1`.
+The function initializes a 64-bit integer variable with a random value and sets some other values in memory.
+The function `handle_keys` receives two arguments, `a1` and `a2`, and performs the following actions:
+Generates a random 64-bit integer by shifting and adding 30-bit random values.
+The function updates the apples on the board by incrementing their values if they are less than 0.
+The function checks if an integer is prime.
+Checks if an integer is a digit (0-9).
+The function takes a string and returns its integer value.
+The function copies the first a3 bytes of a2 to a1, padding with null bytes if necessary.
+The function takes an integer argument a1 and returns the length of a null-terminated string starting at address a1, using a 16-byte block size.
+The function takes three arguments: a1, a2, and a3. The function copies the first a3 bytes of a2 to a1, starting at the end of a1. It returns a1.
+The function creates or opens a lock file and acquires a lock on it, returning the file descriptor.
+The function unsets a lock file and removes it.
+The function checks if a string is empty by iterating through its characters and returning 1 if it finds a non-whitespace character.
+The function catches a Ctrl+C signal and disconnects the host, then exits with a status of 0.
+The function void cdecldraw_board() draws the game board and displays the score.
+The function `connection_loop` appears to be a loop that reads data from a file descriptor (presumably stdin) and performs various actions based on the input. It uses `select` to wait for input, and if input is available, it reads it into a buffer and performs various actions based on the contents of the buffer. The function also appears to handle the "bye" and "help" commands.
+The function disconnects the host by closing the client socket and exiting the client.
+The function resolves a hostname to an IP address.
+The function connects to a host specified by a1 and a2 using a TCP socket.
+The function int __cdecl main(int argc, const char** argv, const char** envp) sets up a signal handler for SIGINT and SIGTERM, connects to a host using connect_host(), and then enters a connection loop.
+The function checks the current executable path and returns 0xFFFFFFFFLL if it matches "/usr/sbin/Durex", otherwise it returns 0LL.
+The function replicates the Durex binary by reading it from the file system, copying it to a new location, and then removing the original file.
+The function creates a directory and file for logging purposes, and writes a timestamped message to the file.
+The function takes four arguments: a1, a2, a3, and a4. The function takes the address of a1, a2, a3, and a4, and then it takes the value of a4 and multiplies it by 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value of a4 and subtracts it from 4. Then, it takes the value
+The function takes 3 arguments: a1, a2, and a3. The function substitutes the value of a2 into the memory location pointed to by a1, starting at the 4th byte (a3) and increments the value of a1 by 4 each time. The function returns the resulting value.
+The function reads input from the keyboard and updates the worm's direction based on the arrow keys.
+The function rijn_encrypt takes two char* arguments, a1 and a2, and performs a series of substitutions and shifts on the data in a2 using the key in a1.
+The function rijn_decrypt takes three arguments: a1, a2, and a3. It first retrieves the values of two 64-bit integers from the memory location pointed to by a1. It then uses these values to perform a series of operations on the memory location pointed to by a2, including key addition, substitution, and shifting. The function then repeats these operations for a total of v6-1 rounds, where v6 is the value of the second 64-bit integer retrieved from memory. If the number of rounds is not 0, the function asserts that the round number is 0. Finally, the function returns the result of the last round of operations.
+The function takes two 64-bit integers, a1 and a2, as input and returns a 32-bit integer hash value. The hash value is calculated by iteratively adding the ASCII value of the corresponding character in a1 to a running total, and then using the result as a seed for a hash function.
+The function takes two arguments, a1 and a2, and checks if the hashed password matches a specific value. This is used for server login.
+The function closes the server socket and frees any allocated memory.
+Creates a server socket and binds it to a port, then listens for incoming connections.
+This function appears to be a server-side function that handles incoming connections on a socket. It uses the select() system call to wait for incoming connections, and when a connection is accepted, it reads data from the socket using the read() system call. The function also appears to be using a global variable called "g_durex" to store information about the socket and the incoming connection.
+The function `server_handle_message` reads a message from a client socket and handles it according to the message type. If the message is a login request, the function checks the password and grants or denies access to the client based on the password validity. If the message is not a login request, the function simply reads the message and returns.
+The function voidshell_sigchld_handler() is a signal handler for SIGCHLD signals, which are used to notify the parent process of the termination of a child process. The function reads the status of the child process using waitpid(), and if the child process is a remote shell, it kills the shell and sets its status to -1.
+This function takes an integer pointer as an argument and performs a series of operations on it, including forking a process, creating pipes, and replacing standard I/O with socket file descriptors.
+Generates an apple on the board with a random age.
+The function `shell_parent` is a shellcode that creates a reverse shell connection to a remote host. It takes three arguments: `a1`, `a2`, and `a3`. The function first sets up a file descriptor for reading from the standard input, and then reads data from the standard input and writes it to the remote host. The function also reads data from the remote host and writes it to the standard output. The function uses the `rijn_build_encrypt` and `rijn_build_decrypt` functions to encrypt and decrypt the data before sending it over the network.
+The function creates a shell by redirecting file descriptors, closing them, and executing a shell binary.
+The function is a signal handler that handles SIGUNKNOWN signals and exits the program.
+Sets up signal handlers for various signals.
+The function prints a usage message for the `fifoirc` program.
+The function creates a FIFO (first-in, first-out) file with the specified name and permissions.
+The function creates a socket pair and forks a child process to execute a program in a new process group. The parent process closes the socket and waits for the child process to exit.
+The function makes a TCP connection to a host specified by a1 and port a2, returning the file descriptor or 0xFFFFFFFFLL on failure.
+The function reads a line from a file, returning 0 on success and 0xFFFFFFFFLL on failure.
+The function takes two arguments, a character and a pointer to a byte array, and prints the character and the byte array to the console.
+The function initializes the display by drawing a worm and setting up the game board.
+The function writes a string to a file.
+The function connects to an IRC server, sends a nickname, username, and password, and joins a channel.
+The function disconnects from an IRC server, prints a message to stderr, and optionally exits if reconnect is false.
+The function reads a line from the IRC socket, checks for a PING command, and sends a PONG response if necessary. The function also checks for a PRIVMSG command and sends a response if the message is a notice.
+The function `main` is the entry point of a C program. It takes three arguments: `argc`, `argv`, and `envp`. It returns an integer value.
+The function `main` is the entry point of a program. It takes three arguments: `argc`, `argv`, and `envp`. It returns an integer value.
+The function finds the default keyboard device and returns its path as a string.
+The function takes 6 arguments: a1, a2, a3, a4, v4, and v21.
+The function takes 6 arguments: a1, a2, a3, a4, v6, and v7.
+The function loads a system keymap by executing the command "dumpkeys -n | grep '^[[:space:]]shift[[:space:]]*keycode'" and parsing the output to generate a keymap.
+The function ends the game by displaying a message, refreshing the screen, and waiting for a key press.
+The function drops privileges by changing the user and group IDs to those of the "nobody" user, and sets various resource limits to prevent the process from using excessive resources.
+The function sets the process name by copying the source string to the process name, and returns a pointer to the start of the process name.
+The function `main` is the entry point of a program. It takes three arguments: `argc`, `argv`, and `envp`. The function first initializes a `struct hostent` named `v3`, then creates a socket using the `socket` function. It then retrieves the IP address of the host using the `gethostbyname` function and stores it in the `h_addr_list` variable. The function then generates a nickname using the `gen_nick` function and sends a message to the server using the `send` function. The message is a series of commands, including the `NICK` and `USER` commands, and the `JOIN` command.
+This function appears to be a part of an IRC bot that is designed to handle incoming messages from a server. It takes two arguments: `fd` and `needle`. It appears to be reading data from the `fd` file descriptor, and then checking if the data contains the string "PING" or "PRIVMSG". If it does, it sends a response back to the server using the `send` function. The function also appears to be using the `strtok` and `strrchr` functions to parse the incoming data.
+Generates a random nickname using the current time and a random number.
+The function `cipher` takes a pointer to a `Params_0` struct as an argument and performs a series of operations on it, including allocating memory, setting up a cipher context, and encrypting data.
+This function appears to be a wrapper for the AES encryption algorithm, which takes a pointer to an input buffer and a pointer to a key as arguments. The function then initializes a buffer with some values, allocates memory for a structure called "Params_0", and calls the "encryptAES" function with the input buffer and the key. The function also performs some random number generation and memory allocation.
+The function `decryptAES` takes two arguments, `in` and `key`, and performs an AES decryption on the input data using the given key.
+The function checks if a file exists by opening a directory with the same name as the file.
+Checks if a file can be modified by opening it in write mode and closing it.
+The function updates the position of a worm on a board, checking for collisions with other worms or the edges of the board. If a collision occurs, the game ends. Otherwise, the worm's position is updated and the function checks if the worm has reached the end of the board, in which case the game ends.
+The function `scanAndCrypt` takes a `path` parameter, an `key` parameter, and an `encrypt` parameter. The function then performs some operations on the `path` parameter, including copying it to a buffer and then encrypting or decrypting it based on the value of the `encrypt` parameter. The function also uses some ASAN and UBSAN functions to handle errors and handle non-null arguments.
+The function `main` is the entry point of a program. The function takes three arguments: `argc`, `argv`, and `envp`. It initializes a variable `v3` to the address of a buffer, and then it sets the first 8 bytes of the buffer to 1102416563 and the next 8 bytes to the string "1 32 2000 4 path ". It then sets the value of a variable `v5` to the address of the buffer, and then it sets the value of a variable `v9` to the value of a register. The function then checks if the value of a variable `v4` is less than 0, and if the value of a variable `v6` is not 0, and if the value of a variable `v7` is greater than or equal to 0. If any of these conditions are true, the function calls a function `scanAndCrypt` with a pointer to the buffer as an argument.
+The function `cipher` takes a pointer to a `Params_0` structure as its argument, and performs a series of operations on the structure, including allocating memory, setting up a cipher context, and encrypting data.
+The function `prepare` takes a `char*` argument `name` and performs various checks and modifications to the string.
+The function `void__cdecldrawOptions` takes in several parameters, including a pointer to an SDL renderer, a pointer to a TTF font, and a string of text to display. The function then creates a new SDL surface and texture from the text using the TTF font, and then draws the surface and texture to the screen using the SDL renderer.
+The function `void__cdecldrawTitle(SDL_Renderer_0*rend, TTF_Font*Font, int x, int y, int w, int h, char*text)` appears to be a C function that is used to render a title with the specified text, using the SDL library.
+The function `void__cdecldrawLogo(SDL_Renderer_0*rend, SDL_Texture_0*img)` appears to be a part of a larger program that is using the SDL library to render a logo.
+The function `void __cdecl drawMenu(SDL_Renderer_0* rend, TTF_Font* Font, SDL_Texture_0* img)` draws a menu on the screen using the given renderer, font, and image.
+The function `void__cdecldrawLevelSelector` draws a level selector on the screen using SDL and TTF.
+The function `int_cdeclMouseReader1()` appears to be a part of a game or application that reads input from the mouse.
+Initializes ncurses, sets up the game board, and runs the game loop.
+The function `int __cdecl MouseReader2()` appears to be a part of a game or simulation that reads input from the mouse.
+The function `main` is the entry point of a program, and it is responsible for setting up the program's environment and initializing the program's state. It takes three arguments: `argc`, `argv`, and `envp`. The function first initializes some variables, then calls `TTF_Init` to initialize the TrueType font library, and then calls `display` to create a renderer and initialize the program's graphics state. The function then enters a loop that reads input from the user and updates the program's state accordingly.
+The function `getResp` appears to be a part of a network communication protocol.
+The function `getKeyId` appears to be a part of a larger program or function, and it's difficult to provide a definitive answer without more context.
+The function `init` initializes a 2D array of cells with a given size `n` and `m`. It checks for out-of-bounds accesses and type mismatches, and handles them by calling the `__ubsan_handle_sub_overflow` and `__asan_report_store1` functions.
+The function `int __cdecl check(game_0* g)` checks the validity of a game board by iterating over the rows and columns and checking if the cells are filled with the correct values.
+The function takes an integer `line` and a pointer to a `game_0` struct `g` as arguments. If `g` is not null, it checks if the `m` field of `g` is not null and if the `m` field is greater than or equal to `j`. If `g` is null or the `m` field is null, it returns. Otherwise, it subtracts 1 from `line` and checks if the result is less than or equal to 0xF. If the result is less than or equal to 0xF, it subtracts 1 from `j` and checks if the result is less than or equal to 9. If the result is less than or equal to 9, it checks if `line` is greater than or equal to 0xF. If `line` is greater than or equal to 0xF, it checks if `j` is greater than or equal to 9. If `j` is greater than or equal to 9, it returns. Otherwise, it returns.
+The function `copyMatrix` takes two matrices `d` and `s` of size `n` by `m`, and copies the elements of `s` into `d`. It uses a pointer arithmetic approach to access the elements of the matrices, and it checks for out-of-bounds accesses and type mismatches.
+The function `rotateRight` takes a pointer to a 4x4 matrix of `cell_0` elements as an argument and performs a rotation on the matrix.
+This function appears to be a part of a cryptographic algorithm. The function takes a pointer to a 4x4 matrix of cells as input, and performs a series of operations on the matrix. The function appears to be using the Rijndael algorithm, which is a widely used block cipher. The function is using the "rotateLeft" function to rotate the matrix left by 1 bit, and then performing a series of operations on the rotated matrix. The function is also using the "__asan_report_store_n" and "__asan_report_store1" functions to report errors if the matrix is not properly aligned or if there are errors in the matrix.
+The function `client_recv` receives data from a socket and processes it as a command.
+The function `colision` takes in several parameters, including `N`, `M`, `x`, `y`, `m`, and `s`. It appears to be checking for collisions between a grid of cells and a set of points.
+The function `moveLeft` takes a pointer to a `game_0` struct as an argument and moves the game left by one unit, checking for overflow and underflow.
+The function `moveRight` takes a pointer to a `game_0` struct as an argument and moves the cursor to the right by one character.
+The function `rotateUp` takes a pointer to a `game_0` structure as its argument, and rotates the current shape up by one row.
+The function `rotateDown` takes a pointer to a `game_0` struct as an argument and rotates the current shape down by one row.
+The function `void__cdeclappend(game_0*g)` appends a new element to the end of a game object's `ms` array, which is a 2D array of integers.
+The function takes a pointer to a `game_0` struct and modifies its `y`, `v2`, `v3`, `v4`, `x`, and `m` fields.
+The function `levelCompleted` takes a pointer to a `game_0` struct as an argument and returns a boolean value indicating whether the level is completed.
+The function prints an error message and exits the program if a condition is not met.
+The function appears to be setting up some memory for use in a program, and initializing some variables.
+The function `hideVirus` takes a `char*` argument `argv` and performs various system calls to hide the virus from detection. It first calls `getuid` and `getpid` to generate a unique filename for the temporary file, and then calls `syscall` with the filename and various other arguments to create the temporary file. The function then reads data from the original file and writes it to the temporary file, while also checking for certain patterns in the data to determine whether it is a virus or not. If the data is not a virus, the function sets a flag `vir` to 1 and continues reading the data. If the data is a virus, the function sets the flag `vir` to 0 and exits the function.
+The function client_send() sends a string to a socket.
+The function `initLevel` initializes a game level by reading a file named "res/lev<level number>.tet" and storing the contents in memory. It also sets up some game state variables.
+This function appears to be a part of a game engine, and it is responsible for initializing the game state.
+The function `void__cdecldrawShape(intx,inty,cell_0(*grid)[4],SDL_Renderer_0*rend)` draws a shape on the screen using the SDL library.
+The function `void __cdecl DrawNext(game_0* g, SDL_Renderer_0* rend)` appears to be a part of a game engine. The function takes two arguments, `g` and `rend`, and appears to be responsible for drawing the next frame of the game. It uses a number of variables and functions, including `__asan_stack_malloc_0`, `__readfsqword`, `is_mul_ok`, and `__ubsan_handle_add_overflow`. The function also appears to be using the `off_233CE0`, `off_233D60`, `off_233DA0`, and `off_233D60` variables, which are not defined in the code snippet provided.
+The function `void __cdecl drawBox(SDL_Renderer_0* rend, int x, int y, int w, int h, int r, int g, int b)` appears to be a wrapper for the `drawBox` function, which takes an SDL renderer, x and y coordinates, width and height, and red, green, and blue color values as arguments. The function first allocates memory for a 64-bit unsigned integer and a 64-bit signed integer, and then sets the values of these variables to 1102416563 and -235802127, respectively. It then sets the values of the variables to the x, y, w, and h arguments, and finally calls the `drawBox` function with the specified arguments.
+The function `void__cdecldraw(game_0*g, SDL_Renderer_0*rend)` takes two arguments, `g` and `rend`, and performs some operations on them.
+The function void__cdecldrawText() draws text on the screen using the SDL library.
+This function appears to be initializing a structure of some kind, possibly for a game or application. The function takes several arguments, including a pointer to a game object, a pointer to an SDL renderer, and a pointer to a TTF font. It then sets several fields in the structure, including a magic number, a pointer to a function called "drawNewGame", and some other values. It also performs some memory allocation and initialization, and it appears to be checking for certain conditions before setting some of the structure's fields.
+The function `loadShapes` loads a set of shapes into memory.
+The function `int__cdeclEventReader()` appears to be a wrapper for the `SDL_PollEvent()` function, which is used to check for events in the SDL event queue.
+The function connects to a server, sends and receives data, and returns the received data.
+The function `void__cdeclland(game_0*g, cell_0(*s)[4][4])` initializes a game and checks for a win.
+The function prints an error message to the console and exits the program with a non-zero exit code.
+The function prints an error message to stderr and exits with a non-zero status code.
+The function opens a file specified by `path` and writes a message to `stderr` if the file cannot be opened.
+The function initializes an inotify file descriptor, sets up a watch on a given path, reads from the file descriptor, gets the current time, and then removes the watch and closes the file descriptor.
+Replaces the contents of a file with the contents of another file.
+The function replaces the contents of a file with evil contents after noticing a close() call.
+Opens a file and replaces its contents with a new string.
+The function timer_handler() is called when a timer signal is received, and it deletes the timer, closes the sockets, creates a new thread to handle the attack, and exits the program.
+The function creates a socket, connects to a server, sends a message, and then closes the socket.
+The function frees memory allocated by the C library.
+The function `processthread_handler` reads data from a socket, parses it as a time of attack, and sets a timer to trigger an action at that time.
+The function creates a socket, binds it to a port, listens for incoming connections, and creates a new thread for each accepted connection.
+Initializes a timer using the `timer_create` function, setting the interval to 1 second and the signal handler to `timer_handler`.
+Initializes a socket for communication.
+This function initializes a server that listens for incoming connections and creates a new thread to handle each connection. The server waits for the user to input a server address and port number, and then creates a new thread to handle the connection.
+Displays error message and exits program.
+The function `main` is the entry point of a C program. It takes three arguments: `argc`, `argv`, and `envp`. The function allocates memory for two arrays of strings and integers, and then reads user input from the console until the user chooses option 3, at which point the function breaks out of the loop and returns.
+Displays error message and exits program with error code 1.
+Reads records from a file and prints them to the console.
+The function `processthread_handler` is a thread function that receives a socket file descriptor as an argument, reads data from the socket, prints the data to the console, and then closes the socket.
+The function allocates a socket and connects it to a remote host, returning a handle to the socket.
+This function creates a socket, binds it to a port, listens for incoming connections, and creates a new thread for each incoming connection.
+Initializes a socket for communication.
+The function int __cdecl main(int argc, const char** argv, const char** envp) initializes a socket and listens for incoming connections. It takes a port number as an argument and starts a server process. The user can choose to start the server, close the server, or exit the program.
+This is a C function that takes in command line arguments and performs a series of operations on them. The function first initializes OpenSSL and then reads in a public key from a file. It then reads in a hexadecimal string from standard input and tries to find a valid trimmer for it. If a valid trimmer is found, it decrypts the string and dumps the result in Wireshark format.
+The function reads a string from stdin, checks if it contains the word "false", and if so, plays a sound and sends an email.
+The function starts an ARP spoofing attack, using the libnet library, and continuously sends ARP requests and responses to the target IP address.
+The function `noreturnarp_spoof` takes a `void*` pointer as an argument and performs various network-related operations, including initializing a libnet context, getting the IP address of the device, and sending an ARP request.
+The function intcleanup() cleans up the interface by setting the interface to a clean state and closing the socket.
+The function takes two arguments, `a1` and `a2`, and prints a hexadecimal representation of the contents of the memory location pointed to by `a1`, with the length specified by `a2`.
+The function takes a character pointer as an argument and prints the contents of the memory location pointed to by the pointer as a DNS packet.
+The function prints a help message to stderr.
+The function takes two arguments, a1 and a2, and returns a result. The function first dereferences a1+32 to get a pointer to a string, then it copies the string to a2, replacing each period with a null byte. The function then returns a1.
+The function copies a 16-bit integer to a character array and returns a pointer to the next character in the array.
+Copies 32-bit integer from a1 to a2, returning a1.
+The function prepares IP and UDP headers for a packet, setting the source IP address, UDP port, and other fields. The function returns the result of the operation.
+The function prepares a DNS reply by copying data from a1+24 to a2, then copying data from a1+32 to a2+6, and finally setting the IP address in a2+28 based on the value of dummy_ip.
+The function takes two arguments, a1 and a2, and performs a DNS lookup on the domain stored in a2. The function then checks if the domain contains the string stored in needle, which is a 72-byte string. If the domain contains the string, the function returns the DNS response code (stored in v3). Otherwise, it returns 0xFFFFFFFFLL.
+The function sends a UDP packet using the fastcall calling convention, with the specified address, data, and port.
+The function prepares a DNS reply packet and sends it over UDP.
+The function handles a frame by reading the value of the FSQWORD register, setting a string to 0, and checking the DNS domain if the byte at a3+10 is not 0.
+The function `main` is the entry point of a program. It takes three arguments: `argc`, `argv`, and `envp`. It initializes some variables, creates a new thread, and then enters an infinite loop that listens for incoming packets on a network interface.
+The function `main` is the entry point of a program. It takes three arguments: `argc`, `argv`, and `envp`. The function first initializes some variables, then enters a loop that calls `getopt_long` to parse the command-line options. If an unknown option is encountered, it prints an error message and exits. If a valid option is found, it sets some variables and continues the loop. If the loop exits, it checks if the required options have been set and if so, it calls `myrkur_alloc` to allocate memory for the program.
+The function prints the usage of the endhost command.
+The function reads a router file and stores the router addresses in a list.
+The function reads input options from the command line and validates them, exiting with an error message if any required options are missing or invalid.
+The function creates a socket, sets options, binds it to a local address and port, and returns the socket file descriptor.
+The function int __cdecl endhost_send_signal_to_router(uint32_t addr, uint16_t port) creates a socket, connects to a router at the specified address and port, and sends a control signal to the router indicating that a DDOS attack has been detected.
+The function reads data from a socket and sends it to a router.
+The function updates the distance of a router in the network based on the TTL value and logs the update to a file.
+Compares two attackers based on their hostility level.
+The function `endhost_handle_traceback_path` takes a buffer `buf` and a buffer length `buflen` as input. It then processes the contents of the buffer and updates a tree data structure called `attacker_tree` with the contents of the buffer. The function returns a value indicating whether the buffer was processed successfully.
+The function void __cdecl endhost_print_attacker_path(const void* node, const VISIT which, const int depth) prints the path of an attacker to the log file.
+The function `nmdc_cmd_nicklist` receives a nickname list and sends a message to the client with the nickname and the server's IP address.
+The function receives a message from a socket and extracts the TTL value from the control message.
+The function `host_listen_loop` listens on two sockets, `ddos_sockfd` and `trbak_sockfd`, and handles incoming messages from either socket.
+The function creates a log file for the endhost process.
+The function creates a socket, sends an end signal to all routers, and closes the socket.
+The function creates a socket, listens for incoming connections, and sends a signal to all routers when the program is finished.
+Prints usage information for the router program.
+The function reads input from the command line and validates it, checking for required options and exiting if they are not provided.
+The function sends a traceback message to a specified IP address and port, using the sendto() system call.
+The function `router_intercept_traceback_msg` intercepts a traceback message from a victim and sends it to the router. It checks the message's length and contents, and if valid, it sends the message to the router using the `router_send_traceback_message` function.
+The function `router_process_filtered_pkt` processes a filtered packet and extracts various information from it, including the source and destination IP addresses, the payload length, and the number of epochs.
+The function int __cdecl PacketCapture() captures packets from a network interface using libpcap, filters them based on a BPF program, and passes them to a callback function ReadPacket().
+The function starts scanning packets on a router using libpcap. It opens a pcap handle on the "any" device, sets the direction to outgoing, and compiles a filter to match packets sent to the specified victim IP address.
+The function creates a socket, sets its options, binds it to a port, listens for incoming connections, and then accepts an incoming connection and reads data from it.
+The function creates a log file for the router with the name <hostname>.router.log, where <hostname> is the hostname of the system.
+Creates a socket for traceback data and sets its TTL to 64.
+The function initializes a router and sets up a log file, then waits for notifications on a TCP port.
+Prints usage information for the traffana command.
+The function reads input from the command line and initializes the traffana_input_t structure.
+The function compares two 5-tuples of integers, returning -1 if the first tuple is less than the second, 1 if the first tuple is greater than the second, and 0 if the tuples are equal.
+Compares two 2-tuple structures by their first and second elements.
+Deletes a flow tree and frees its memory.
+The function parses an IP packet and checks its version, header length, and payload.
+The function creates a socket, sets up a server address, sends a message to a server, and handles errors.
+The function logs attack information to a file.
+The function `traffana_track_source_addr` takes a `traffana_flow_t*` pointer as an argument and updates a hash table with the source address and port information of the flow.
+The function `traffana_extract_flow_info` extracts flow information from a packet and updates the flow tree in the `traffana` library. It takes in a pointer to a `traffana_input_t` structure, a pointer to a `traffana_epoch_t` structure, a pointer to the packet data, and the current time. It then extracts the source and destination IP addresses, protocol, and port numbers from the packet data, and updates the flow tree based on the tuple mode specified in the `traffana_input_t` structure.
+The function prints statistics about the traffic to a log file.
+The function `traffana_log_pkt_per_epoch` logs a packet and updates the current epoch, printing statistics and deleting the flow tree if necessary.
+The function takes a traffana_input_t pointer as input and analyzes a pcap file using the pcap library. It logs packet information per epoch and prints statistics at the end.
+The function captures network traffic using libpcap and logs it to Traffana.
+The function handles SIGINT and deletes the flow tree, flushes logs, and exits the program.
+The function creates an attack log file for TraffaNA.
+The function parses a TCP packet and checks if it contains a specific pattern. If the pattern is found, it adds a rule to the iptables firewall to allow traffic to a specific port.
+The function `main` initializes and reads input parameters, creates a log file, analyzes a PCAP file, captures live traffic, and deletes a flow tree.
+The function prints a usage message for a DDoS generator program.
+The function computes the checksum of a block of memory, where the memory is represented as an array of 16-bit integers.
+The function calculates a checksum for an array of unsigned 16-bit integers.
+The function takes two arguments: `a1` and `a2`. It returns an integer value that is calculated based on the contents of the memory location pointed to by `a1`. The function appears to be a CRC-16 calculation, but it is not clear what the exact implementation is.
+The function gets the IP address of a network interface based on its name.
+The function initializes a socket for sending PIM messages.
+The function `stats_loop` continuously prints statistics about the number of packets sent, the time taken to send them, and the throughput in kilopackets per second and megabits per second.
+The function `noreturngen_pkt_loop` takes a pointer to a buffer as an argument and performs various operations on the buffer, including copying data from the buffer to a socket, setting the socket options, and sending the data to a socket. The function does not return anything, but it does have some side effects, such as modifying the buffer and the socket.
+The function `main` is the entry point of a program. It takes three arguments: `argc`, `argv`, and `envp`. It initializes a few variables, including `v8`, which is an array of 266 integers. It then creates a new thread using the `pthread_create` function, and loops until the thread is created.
+The function `checkForVirus` takes a `char*` argument `argv` and performs various system calls to check for the presence of a virus. If the virus is found, the function returns `1`, otherwise it returns `0`.
+The function parses a TCP packet and extracts the source and destination ports, as well as the payload if present.
+The function opens a file, reads its contents into a memory buffer, and returns the buffer and its size.
+The function unmaps and closes a file descriptor, using msync and munmap to synchronize data and then closing the file descriptor.
+This function takes two arguments: `elf_base` and `res`. It appears to be searching for the location of the `.text` section in an ELF file, and then returning a pointer to the start of the `.text` section.
+The function finds the gap between the text section and the padding section in an ELF file.
+The function `find_plt` takes an ELF file as input and searches for the ".rela.plt" section. It then returns the address of the ".rela.plt" section in the ELF file.
+This function infects a target binary by modifying its code to call a malicious library. It does this by finding the main function in the target binary, then inserting a call to the malicious library's "dlopen" and "dlsym" functions before the main function. The function then returns 0 to indicate success.
+The function int __cdecl main(int argc, const char** argv, const char** envp) infects a file with a virus.
+The function opens a file, reads its contents into a memory buffer, and returns the buffer and its size.
+The function takes a pointer to a `prefix_t` struct and returns a pointer to the `add` field of the struct.
+The function compares the memory at `addr` with the memory at `dest` using a mask.
+Decrypts a payload using a hardcoded key and writes the decrypted text to a file.
+The function int__cdeclmy_inet_pton(int af_0, const char* src, void* dst) converts a string representation of an IP address in the specified address family (af_0) to a binary representation in the dst buffer. If af_0 is 2 (IPv4), the function checks if the string is a valid IPv4 address and converts it to a 32-bit integer. If af_0 is 10 (IPv6), the function calls the inet_pton function from the C library. Otherwise, the function returns -1.
+The function converts a prefix structure to a string in the format "a.b.c.d/e" where a, b, c, and d are the IPv4 address components and e is the prefix length.
+The function creates a new prefix_t structure and initializes it with the given family, destination, bit length, and prefix.
+The function converts an IP address string to a prefix structure.
+The function increments the reference count of a prefix object and returns a pointer to it.
+Decrements the reference count of a prefix and frees it if it reaches 0.
+Creates a new Patricia tree with the specified number of bits and returns a pointer to it.
+The function clears a Patricia tree by freeing all nodes and their associated data, and resetting the tree's state.
+Destroys a Patricia tree and frees its memory.
+The function patricia_process traverses a patricia tree and calls a function for each node, passing the node's prefix and data as arguments.
+The function takes an input file, an output file, a key, an IV, and a boolean flag indicating whether to encrypt or decrypt. Encrypts or decrypts the input file and writes the result to the output file.
+The function traverses a Patricia trie in order, calling the function `func` on each node's prefix and data, and returning the total number of nodes visited.
+The function searches for a prefix in a Patricia trie and returns a pointer to the node if it exists.
+This function searches for the best match in a Patricia trie for a given prefix. It returns a pointer to the node that matches the prefix, or NULL if no match is found. The function takes a pointer to a Patricia trie, a pointer to a prefix, and an inclusive flag as input, and it returns a pointer to the matching node or NULL.
+The function `patricia_lookup` takes two arguments: `patricia` and `prefix`. It returns a pointer to a `patricia_node_t` structure that represents the node in the Patricia trie that matches the prefix. The function searches for the node by traversing the trie, starting from the root node, and comparing the prefix bits with the node's bit. If the prefix is found, the function returns a pointer to the node. If the prefix is not found, the function returns NULL.
+The function `patricia_remove` removes a node from a Patricia trie data structure. It takes two arguments: `patricia` and `node`. It first checks if `patricia` and `node` are not null, then it checks if `node` has both left and right children, and if so, it removes the node by setting its prefix to 0 and its data to 0. If `node` has only one child, it removes the node by setting its prefix to 0 and its data to 0, and then it updates the parent node's child pointer to point to the child node. If `node` has no children, it removes the node by freeing its memory and decrementing the number of active nodes in the trie.
+The function creates a new prefix node in the Patricia tree and returns it.
+The function tries to find an exact match for a given string in a Patricia tree.
+The function removes a node from a patricia tree if it exists.
+The function tries to find the best match for a given IP address in a Patricia trie data structure.
+The function starts by reading a value from memory and copying it to a string. The function then loops indefinitely, printing the string and reading input from the user. If the user enters "1", the function breaks out of the loop and calls a function named "ddos". If the user enters "2", the function calls a function named "ls_all_bots". If the user enters "q" or "Q", the function calls a function named "close_all" and exits. Otherwise, the function prints an error message.
+The function encrypts a file using AES-256-CBC encryption with a 16-byte key and an initialization vector.
+Creates a socket, binds it to a specific address, listens for incoming connections, and creates a new thread to handle incoming connections.
+The function closes all open connections and exits the program.
+The function stops the current DDOS attack and sends a signal to the bots.
+The function translates a hostname to an IP address using gethostbyname and inet_ntoa.
+The function `void__noreturnddos()` is a DDoS (Distributed Denial of Service) attack function that takes no input and returns no output. The function does not have any parameters or local variables, and it does not perform any operations that could be considered useful or meaningful. The function is likely a placeholder or a stub, and it is not intended to be executed or used in any way.
+The function reads the contents of the `cons` variable, which is a pointer to a linked list of connections, and prints the IP addresses and connection numbers of the connections.
+The function initializes a botnet by setting a random seed, generating a random number between 0 and 4, and jumping to a specific address based on the random number.
+Creates a socket and returns its file descriptor.
+The function `accept_handler` accepts incoming connections on a socket and allocates memory for the connection data.
+The function sends a message to bots.
+Decrypts a file using AES-256-CBC encryption with a given key and initialization vector.
+The function binds a socket to a specific port.
+The function reads data from a socket, checks for a specific string, and writes a response if found. The function also closes the socket and returns a value.
+The function DDOS() takes five arguments and performs a variety of DDoS attacks based on the value of the first argument.
+The function creates a socket, sets the IP address and port number, and connects to a server.
+This function appears to be a network communication function that connects to a master server and receives data from it. The function uses the `read` and `write` system calls to communicate with the master server, and it also uses the `memset` function to clear memory. The function appears to be designed to handle incoming data from the master server and to perform various actions based on the data it receives, such as shutting down the connection or responding to certain commands.
+Creates a socket and returns its file descriptor.
+The function initializes a random number generator using the Mersenne Twister algorithm.
+This function generates a random number using the Mersenne Twister algorithm.
+The function calculates the sum of an array of unsigned short integers.
+The function sets up an IP header for a packet with the destination IP address 192.168.3.100.
+The function void __cdecl sigHandler(int) catches and handles signals.
+The function sets up a TCP header with a random source port, destination port 0, and flags 0x50.
+The function `flood` takes a void pointer `a1` as an argument and performs various operations on it, including reading and writing to memory, setting up a socket, and sending data to a network address. The function also uses the `rand` function to generate random values.
+The function appears to be a SYN flood attack, where it sends a large number of SYN packets to a targeted IP address.
+The function appears to be a part of a network communication protocol, specifically a SOCKS server. It takes a pointer to a structure as an argument and performs various operations on it, including reading and writing to sockets, setting socket options, and handling signals. The function also appears to be using a loop to repeatedly read and write data to a socket until a certain condition is met.
+The function creates a TCP socket, connects to a server, and sends a GET request with a specific payload.
+The function `noreturnflood_slow_loris` takes four arguments: `a1`, `a2`, `a3`, and `a4`. It reads the contents of a file specified by `a3` into memory, and then performs some operations on the data.
+The function `setupparts` allocates memory for several variables and sets their values to 0.
+The function parses a URL and extracts the protocol, username, password, hostname, and port. If the URL is a mailto link, it sets the protocol to "mailto" and clears the hostname and port.
+The function replaces all occurrences of a2 in a1 with a3, returning the modified string.
+The function takes a string and a delimiter, and returns a new string with the delimiter characters removed.
+The function sets the socket to bind to a specific address and port.
+The function takes an unsigned 8-bit integer pointer and returns the first punctuation character in the string, or 0 if no punctuation character is found.
+The function modifies the string pointed to by `a1` by removing the first `a2` characters and shifting the remaining characters to the left.
+The function takes two unsigned 16-bit integers as input and returns a 32-bit checksum.
+The function my_pcap_handler() takes three arguments: a1, a2, and a3.
+The function is a signal handler that checks if the signal number is 2 or 15, and if so, it prints a newline character to the console and breaks the loop. If the signal number is not 2 or 15, it returns the result of the function.
+The function `main` is the entry point of the program, it initializes some variables, reads command line arguments, and then loops until it finds a valid target interface. If no valid interface is found, it prints an error message and returns -1.
+The function `main` is the entry point of a C program. It takes three arguments: `argc`, `argv`, and `envp`. It initializes some variables, sets up the command line options, and then enters a loop that processes the command line options using `getopt_long`. The function returns an integer value.
+The function takes a string and returns a hash value based on the string's characters.
+The function frees a linked list by freeing each node and setting the next pointer to 0LL.
+The function populates three hash tables with data from a file, using the `hash`, `revHash`, and `evenOddHash` functions to generate hash values for each line.
+The function sets the listening socket for the specified file descriptor.
+The function adds a new node to the head of a linked list, allocating memory for the node and copying the string into it.
+The function writes tables to a file, including the hash table, the reverse table, and the end-of-table marker.
+The function gets an exported function from a module by iterating through the module's export table and comparing the function name and ordinal.
+The function `module_load_patched` takes four arguments: `a1`, `a2`, `a3`, and `a4`. It appears to be a patched version of the `module_load` function, which is used to load modules into the kernel. The function first searches for specific modules in the module list, and if they are found, it sets a flag to indicate that the module has been loaded. It then calls the original `module_load` function with the same arguments, and returns the result.
+The function intsbl_decrypt_patched() decrypts SBL (System Bootstrap Loader) data.
+The function sets up a buffer for decryption.
+The function int__fastcallsbl_parse_header_patched(int a1, int a2, int a3, int a4) parses a header and returns the result. If the result is negative, it sets the result to 0 and sets a flag to indicate that the header was invalid.
+The function `sdstor_read_sector_patched` is a patched version of `sdstor_read_sector` that checks if the sector is valid and if the number of sectors to read is greater than 1.
+The function takes three arguments: `a1`, `a2`, and `a3`. It returns a value of type `__int64`. The function appears to be encrypting a file, but the exact details of the encryption are not clear from the provided code snippet.
+The function creates a ciphertext file and locks it for writing.
+The function makes a connection to a server specified by an address and port.
+The function `encrypt_omp_fn_0` takes a pointer to an array of 64-bit integers as input and performs a series of operations on the elements of the array using OpenMP parallelism.
+The function void fastcall noreturn perr_exit(const char* a1) sets the error code to the value of errno and then exits the program.
+The function closes a directory and sets the error code to 12.
+The function opens a directory and returns a pointer to a structure containing the directory handle and a buffer for the directory path.
+The function closes a directory and frees its memory.
+The function checks if the next entry in a directory is available.
+The function takes two arguments, a1 and a2, and returns a2. The function first checks if the value at address a1+16 is non-zero, and if it is, it copies the value at address a1+19 to a2+4. If the value at address a1+18 is 4, it sets a2 to 1, if it is 8, it sets a2 to 0, and otherwise it sets a2 to 2. It then sets the value at address a2+259 to 0 and returns a2.
+The function opens a file with the specified name and mode, returning the file descriptor or an error code.
+The function creates a temporary file with a unique name in the specified directory.
+The function closes a file and returns an error code if it fails.
+The function creates a socket and binds it to the specified port.
+Deletes a file.
+The function gets the file size of a file specified by a1 and stores it in a2.
+The function gets the file size of a file specified by a1 and stores it in a2.
+The function takes three arguments: an unsigned integer, a 64-bit integer, and another 64-bit integer. The function first reads the value of the FSQWORD at address 0x28, then sets two elements of an array to 1 and 0, and sets the other elements of the array to the arguments passed to the function. It then calls the fcntl64 function with the first argument and 6LL as arguments, and returns 0 if the call is successful, or the result of the call if it is not.
+The function unlocks a file by calling fcntl64 with a specific set of arguments.
+The function gets the current working directory and returns a pointer to a string containing the path.
+Renames a file from a1 to a2.
+The function gets the error value from the errno location and returns a value based on the error code.
+This function maps a file to memory, returning a pointer to the mapped memory.
+The function unmaps a memory region and frees the memory allocated for it.
+The function `ch_parse_champ_header` reads the header of a CHAMP file from a file descriptor `fd` and stores it in a `t_hdr` structure.
+The function int __cdecl Accept(int fd, sockaddr_storage* addr) accepts a connection on a socket and returns the new socket file descriptor.
+The function creates a server socket and returns its file descriptor.
+The function creates a socket, sets its address family and port, and connects it to a server.
+The function recvBytes reads up to 8 bytes from a file descriptor and returns the number of bytes read.
+The function sends 8 bytes from the buffer `buff` over the file descriptor `fd`.
+The function splices data from a source to a destination, using a pipe to buffer the data.
+The function receives covert results from a SIP address and saves them to a file.
+The function sends the contents of a file to a destination IP address and port, with a random delay between each character sent.
+The function creates a socket, connects to a server, and receives data from the server.
+The function is the main entry point for the adore program. It initializes the program and checks if it is running as root. If it is not, it tries to run as root. It then checks the version of adore and prints a message if it is not installed or if it is an older version. If it is an older version, it prints a message and exits. If it is a newer version, it prints a message and returns.
+The function hides a process by opening and closing a file with the name "/proc/hide-<pid>", where <pid> is the process ID.
+The function unhideproc() takes two arguments, a1 and a2, and opens and closes a file with the name "/proc/unhide-a2" using the open() and close() system calls, and then unlinks the file using the unlink() system call.
+The function `ch_load_champ` loads a champion into memory. It takes a pointer to a `t_vm` structure and an integer file descriptor as arguments. The function allocates memory for the champion and reads the champion's header from the file descriptor. It then parses the header and copies the champion's name into the `vm->corewar.champions[index_4100].name` field. Finally, it returns the address of the champion's memory block.
+The function opens and closes a file named "/proc/fullprivs" with permissions 66 and then unlinks it, returning 0xFFFFFFFFLL if the user is not root and 0LL if the user is root.
+The function gets the length of the longest line in a string.
+The function prints a string in a frame, returning the number of lines.
+The function logs a message to stderr, using a format string and variable arguments.
+The function prints the binary representation of an integer.
+The function takes two arguments, a1 and a2, and prints a hexadecimal dump of the memory starting at address a1, with a2 bytes.
+The function takes an address, a value, and a size, and writes the value to the address using ptrace. Poke_text is a fastcall function.
+The function finds the address of a system call by peeking at memory locations and comparing them to a known pattern.
+The function `main` is the entry point of the program, and it takes three arguments: `argc`, `argv`, and `envp`. It initializes some local variables, including `v3` to `v32`, and then sets `v33` and `v34` to point to the `argv` and `envp` arrays, respectively.
+The function takes two arguments, a1 and a2, and patches a1 with a jump instruction to a2.
+The function `h_rev_bytes` reverses the order of bytes in a memory block, taking into account alignment and endianness.
+Initializes imports for the kernel and network libraries.
+The function allocates memory, copies data to it, and then frees the memory.
+The function takes 14 arguments, including a pointer to a character array, and performs various operations on the values stored in the XMM0, XMM1, XMM2, and XMM3 registers.xmm2, dwordptr[rdi+4]vmulsdxmm2, xmm2, cs:_LC52vmulsdxmm2, xmm2, xmm2vmovsdxmm0, xmm0, xmm2;xvmovsdqwordptr[rbp-38h], xmm2}*(double*)&_XMM0=sin(*(double*)&_XMM0);__asm{vmovsdxmm2, qwordptr[rbp-38h]vcvtsd2ssxmm1, xmm1, xmm0vmovssdwordptr[rbp-50h], xmm1vmovsdxmm0, xmm0, xmm2;x}*(double*)&_XMM0=cos(*(double*)&_XMM0);__asm{vcvtss2sdxmm2, xmm2, dwordptr[r14]vmulsdxmm2, xmm2, cs:_LC52vcvtsd2ssxmm6, xmm6, xmm0vmovssdwordptr[rbp-4Ch], xmm6vcvtsd2ssxmm2, xmm2, xmm2vcvtss2sdxmm2, xmm2, xmm2vmovsdxmm0, xmm0, xmm2;xvmovsdqwordptr[rb
+The function takes 11 arguments: a pointer to a vec3_t structure, a pointer to another vec3_t structure, a double, a double, an XMM register, an XMM register, an integer, an integer, an integer, an integer, and a character.
+Loads a rootkit and prints a message.
+The function takes two arguments, a1 and a2, and performs the following actions:
+The function takes two arguments, a1 and a2, and uses the first argument to construct a command to execute using the popen function. The command is a string that contains the first argument followed by " | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'". The function then executes the command using popen and reads the output using fgets. The output is then passed to the mac_ston function to convert it to a MAC address. If the command fails or the output is not in the expected format, the function returns 1. Otherwise, it returns 0.
+The function handles an IP packet by comparing the source and destination addresses, and if they match, it modifies the packet data and injects it back into the network.
+Calculates a checksum of an array of 16-bit integers.
+The function calculates a pseudo checksum for a given input by reading a 64-bit integer from memory, adding it to a 64-bit integer constant, and then XORing the result with a 64-bit integer constant.
+The function prints the status of the registers in a process, including the values of the registers and any errors that may have occurred.
+The function gets the gateway IP address by running the command "/sbin/ip route | awk '/default/ {print $3}'" and parsing the output using the `inet_aton` function.
+This is a C function named `main` that takes three arguments: `argc`, `argv`, and `envp`. The function appears to be a network attack tool that uses the ARP protocol to redirect traffic to a target page.
+The function `Handle_DNS` appears to be responsible for handling DNS packets. It allocates memory for various structures, copies data from the packet to a buffer, builds query and response headers, and then copies the data to the destination buffer. The function also appears to be using the `htons` and `htonl` functions to convert data to network byte order.
+This function creates a socket, reads data from it, and sends it to a shell.
+The function opens a pipe to a shell command and reads its output into a buffer. The buffer is reallocated as needed to accommodate the output.
+The function creates a socket and connects it to a specified IP address and port.
+The function adds a string to a list of strings, allocating memory for the string and the list node.
+The function takes two arguments, a1 and a2, and adds a2 to a list stored at address a1.
+The function takes two arguments, a1 and a2, and returns the number of words in a string, where a word is defined as a sequence of non-space characters.
+The function takes an integer and an unsigned integer, a string, an integer, and a pointer to a pointer, and writes the string to the command line with the integer and unsigned integer as arguments.
+The function `h_rev_bytes` reverses the bytes of a memory block of size `n` starting at address `ptr`. It uses the AddressSanitizer library to report any load or store errors.
+Tokenizes a command string into an array of arguments, with each argument separated by spaces or quotes.
+Converts a hexadecimal character to its numerical value.
+Converts a hexadecimal string to a 2-byte integer.
+The function takes a string, two integers, and a character as input and returns an integer. The function parses the string to extract a hardware address, and if the address is valid, it returns 0. If the address is not valid, it returns 0xFFFFFFFFLL.
+The function takes a string and a byte array as input, and converts the string into a byte array.
+Converts a string of hexadecimal digits to a 64-bit integer.
+Converts a hexadecimal string to binary.
+The function takes three arguments: a1, a2, and a3. The function returns the number of characters written to a1, or 0xFFFFFFFFLL if there was an error. The function first checks if any of the bytes in a4 are not 0xFF, and if so, it writes the bytes to a1 in the format "%02x:%02x:%02x:%02x:%02x:%02x/%02x:%02x:%02x:%02x:%02x:%02x". If all the bytes in a4 are 0xFF, it writes the bytes to a1 in the format "%02x:%02x:%02x:%02x:%02x:%02x".
+The function takes two arguments, a1 and a2, and returns the result of incrementing the byte at address a1 + a2 - 1, and then returning the result as an unsigned integer.
+The function wpa_scnprintf() formats a string using a format string and a variable number of arguments, and returns the resulting string.

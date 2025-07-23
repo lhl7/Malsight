@@ -1,0 +1,502 @@
+The given code closes a file descriptor after infecting it with a virus from a temporary file .
+The function infectWithVirus reads data from a temporary file descriptor , reads data from the main file descriptor , creates a new file descriptor with the same path as the main file descriptor , and writes the combined data from both descriptors to the new file descriptor before freeing memory and returning 0 .
+This code defines a function that writes a single character to the standard output .
+This code checks if all characters in the data array are hexadecimal characters .
+This function checks if a given array of u8 data contains any control characters and returns 1 if it does , 0 otherwise .
+This code checks if a given string contains a newline character .
+This code parses a frequency range list from a string and stores it in a wpa_freq_range_list structure .
+The code compares two integer values and returns 1 if the first value is zero , -1 if the second value is zero , and the subtraction result of the two values otherwise .
+This code takes an integer array as input , sorts it and removes duplicate elements from the array .
+The code clears and frees a given string if it is not empty .
+This code function clears and frees the memory allocated for a binary object if it is not null .
+This code generates a random MAC address and sets the first byte to be a valid universally administered MAC address .
+This function generates a random MAC address while keeping the OUI ( Organizationally Unique Identifier ) intact .
+The function h_puthex outputs the hexadecimal representation of an unsigned character by dividing and modulo operations .
+The code parses a given string to extract the SSID value and stores it in a struct , returning 0 if successful and -1 if not .
+This code adds a new item to a double linked list .
+This code clears the current line by moving the cursor to the beginning , and then prints spaces to overwrite any existing characters on the line .
+This function moves the cursor position to the left in the command buffer if it is greater than 0 and redraws the edit .
+This code defines a function that moves the cursor to the right within a command buffer if the current position is less than the buffer length , and then redraws the buffer .
+The function ` move_word_left ` moves the cursor to the left until it reaches the beginning of a word in the command buffer and then triggers a redraw .
+This code moves the cursor to the right until it reaches the end of a word in a command buffer and then redraws the edited command .
+This code defines a function that deletes the character to the left of the cursor position in a given command buffer .
+This code deletes the character at the current cursor position in the command buffer and redraws the edited line .
+This code deletes the previous word in the command buffer .
+The function h_print_register prints the register status of a given process .
+This code clears the left side of the command buffer by moving the contents to the right and redrawing the edited buffer .
+This code clears the right side of the command buffer if the current position is not at the end .
+The code adds a string to a history list , updating the current history item if the string already exists in the list or creating a new history item if the list is not full .
+This code function clears the current line , copies the content from the history buffer to the command buffer , and redraws the edited content .
+The code implements a function that allows to navigate through a list of edit history entries by moving to the previous entry and updating the current position accordingly .
+This code defines a function that moves to the next item in a history list and updates the current buffer if necessary .
+The function writes the edit history to a file given a filename and a filter callback function .
+This code defines a function called history_debug_dump that clears the edit history line , prints the edit history in reverse order with `` [ C ] '' next to the current history entry , prints the current buffer if valid , and then redraws the edit .
+The code inserts a character into a buffer , updating the buffer 's length and position , while also displaying the character and redrawing the buffer if necessary .
+The function ` process_cmd ` resets the current buffer , adds the command to history , resets the command position and length , edits the command callback , and flushes the standard output .
+This function prints the memory contents of a virtual machine , including the memory addresses and corresponding values , as well as the owner map showing ownership of memory locations .
+The function `` free_completions '' frees the memory allocated for an array of strings .
+The code filters an array of strings by comparing them to a given string , removing any matches and freeing memory for non-matching strings .
+The code finds the maximum common length between a string and multiple strings in a char array .
+The function returns a key code based on the input character , with ' A ' mapped to EDIT_KEY_UP , ' B ' mapped to EDIT_KEY_DOWN , ' C ' mapped to EDIT_KEY_RIGHT , 'D ' mapped to EDIT_KEY_LEFT , and all other characters mapped to EDIT_KEY_NONE .
+The function esc_seq_to_key1_shift maps the character input to a corresponding key code for shift with arrow keys , returning EDIT_KEY_SHIFT_UP for ' A ' , EDIT_KEY_SHIFT_DOWN for ' B ' , EDIT_KEY_SHIFT_RIGHT for ' C ' , EDIT_KEY_SHIFT_LEFT for 'D ' , and EDIT_KEY_NONE for all other characters .
+The function ` esc_seq_to_key1_alt ` returns an edit key code based on the input character last .
+The function returns an edit key code based on the input character , with ' A ' corresponding to Alt+Shift+Up , ' B ' to Alt+Shift+Down , ' C ' to Alt+Shift+Right , 'D ' to Alt+Shift+Left , and default to no action .
+The function ` esc_seq_to_key1_ctrl ` returns a control key code based on the input character 'last ' .
+The code defines a function that maps escape sequences to key codes based on the parameters received , with options for different key combinations and special keys such as insert , delete , and function keys .
+The function ` esc_seq_to_key2 ` returns an enum based on the values of ` param1 ` and ` param2 ` , as well as the character ` last ` , with specific cases returning different key codes and the default case returning EDIT_KEY_NONE .
+The code prints the contents of a virtual machine 's memory in hexadecimal format , displaying memory addresses and values with a line break every square root of the memory size .
+The code defines a function that converts an escape sequence to a key code , taking into account parameters and different types of escape sequences , and returns the corresponding key code or 'EDIT_KEY_NONE ' if the sequence is unknown .
+The code reads and processes keyboard input from a socket connection , handling special key sequences and returning corresponding enum values .
+The function search_redraw searches for a match in the search buffer and prints the result on the console .
+This code searches for a match using the search_find function , clears the search buffer , copies the match to the cmdbuf , and then redraws the editor .
+This function searches for and removes the last character from a string stored in a buffer , then triggers a redraw .
+This code adds a character to a buffer and updates a skip variable before redrawing the search results .
+This code defines a function that takes an edit_key_code as input and performs different actions based on the value of the input , including stopping a search , canceling a search , handling backspace , searching for the next occurrence , searching for a specific character , and returning a default value if no specific action is performed .
+The code defines a function that reads and processes user input to perform various editing operations and commands in a console-based text editor .
+The code defines a function to clear edit history , write to a history file with a provided filter callback , delete historical entries , clear the current line , and reset terminal settings .
+This code defines a function that edits and redraws a command buffer in a command line interface .
+The loader function opens a file specified by the filename parameter and loads the content into the vm structure using ch_load_champ .
+The function `` edit_print_ps '' prints the variable `` ps2 '' if it is not empty .
+The code adds a new socket to the eloop socket table with specified handler and data , reallocating memory as needed and updating related variables .
+The code initializes and populates a set of file descriptors for reading , writing , and handling exceptions using a polling mechanism , while ensuring each file descriptor is within the specified limit .
+The function ` eloop_sock_table_dispatch ` iterates through a table of sockets and calls the corresponding handler function for any sockets that are set in the provided file descriptor set , stopping if the table is marked as changed .
+The function ` eloop_sock_table_destroy ` destroys a socket table by freeing its memory if the table exists , iterating through the table and printing information about each socket entry before freeing the table memory .
+This function registers a socket for reading events by calling eloop_register_sock with the specified parameters .
+The code registers a timeout event with a specified handler , data , and duration in seconds and microseconds , ensuring that the event will occur within a reasonable time frame .
+This code cancels a timeout for a specific handler , eloop_data , and user_data , removing it from the timeout list and returning the number of timeouts removed .
+This code cancels a timeout event for a specific handler , eloop data , and user data , updating the remaining time if the event has n't occurred yet .
+This code checks if a timeout handler with specified data and user data is registered in the eloop timeout list .
+This code defines a function to add a new job with a specified task function and interval to a linked list of tasks .
+The function 'eloop_deplete_timeout ' checks if a timeout with the same handler , eloop data , and user data already exists , and if so , updates the timeout with the requested seconds and microseconds , canceling the old timeout and registering the new one , otherwise it returns -1 .
+The function eloop_replenish_timeout checks if a timeout with the same handler , eloop_data , and user_data exists , and if so , cancels it and registers a new timeout with the requested seconds and microseconds .
+This code defines a function to handle a signal that prints an error message and exits the program with an error status if it can not process SIGINT or SIGTERM signals within two seconds .
+The function eloop_handle_signal sets a pending termination flag if the signal is SIGINT or SIGTERM and increments the eloop signaled count , also incrementing the signaled count for a specific signal if it matches one in the eloop signals array .
+The function eloop_process_pending_signals resets signaled flags , handles pending terminate signals , and calls signal handlers for signaled signals in a loop .
+This code registers a signal handler with the specified signal , handler function , and user data for the event loop .
+This code registers a signal handler for SIGINT and SIGTERM signals and returns the result .
+The function ` eloop_run ` runs an event loop until termination , processing pending signals and timeouts , and handling socket events using polling mechanisms .
+The eloop_destroy function removes all remaining timeouts , destroys socket tables for readers , writers , and exceptions , and frees memory allocated for signals in the eloop structure .
+The function `` os_sleep '' takes in seconds and microseconds as input and sleeps for those durations accordingly .
+The code removes a job from a linked list based on a specific condition , including updating pointers and freeing memory .
+The function os_get_time retrieves the current system time in seconds and microseconds and stores it in the given struct os_time .
+This code retrieves the current system time in seconds and microseconds and stores it in a structure called os_reltime .
+The code defines a function that takes individual components of a date and time , checks if they are within valid ranges , converts them to a time structure , and then uses mktime to convert it to a time value .
+This code converts a given time value to a struct representing the GMT time and assigns the individual components ( seconds , minutes , hours , day , month , year ) to the corresponding fields in the provided struct .
+The code creates a daemon process and writes its PID to a specified file if a file path is provided .
+This code opens /dev/urandom to get random bytes and reads them into the provided buffer , returning -1 if the read is incomplete .
+This code compares two memory blocks up to a certain size and returns the difference between the first differing elements .
+This code compares two strings character by character and returns the difference between the first differing characters .
+This code compares two strings up to a specified length and returns the difference between the first non-matching characters .
+This code defines a function that copies a specified number of characters from the source string to the destination string , stopping when a null character is encountered or the specified number of characters has been copied .
+The code runs a scheduler that executes tasks with the earliest deadline first , updating the remaining time for each task and resetting it after completion .
+This code compares two constant memory regions of given length and returns the result of the bitwise XOR operation on each byte .
+The code defines a function `` os_snprintf '' that safely formats and prints a string to a specified size while handling variadic arguments .
+This code defines a function that executes a program with arguments , waits for its completion if specified , and returns 0 upon successful execution .
+This code defines a function that prints a timestamp in seconds and microseconds if a debug timestamp flag is set , using the current time obtained with the os_get_time function .
+This function prints a formatted message to various output sources based on the given log level .
+The function _wpa_hexdump prints a hexdump of a buffer with a specified title , length , and visibility to various output streams based on the debug level and settings .
+The code prints a hexdump of the input buffer in ASCII format , with options to show or remove certain parts of the output based on the input parameters and the debug level .
+The code defines a function wpa_msg that takes a context , log level , format string , and variable arguments , allocates memory for a message buffer , generates a prefix based on a callback function , prints the message to the console with the prefix and buffer , and calls a callback function with the message and length before freeing the memory .
+This code defines a function wpa_msg_ctrl that takes a context , level , and format string as input , dynamically allocates memory for a message buffer , fills the buffer with formatted message data , and then calls a callback function wpa_msg_cb with the message buffer and length as arguments before freeing the memory .
+The code defines a function that outputs a message globally , allocating memory for the message buffer and calling a callback function if it exists .
+The code defines a function that sleeps for a specified number of milliseconds using the nanosleep function .
+The code converts a string input representing a debug level to the corresponding integer code , or returns -1 if no match is found .
+This code defines a function that copies a specified amount of data into a buffer if the data pointer is not null .
+This function copies the data from the source wpabuf structure to the destination wpabuf structure .
+The function wpabuf_resize resizes a wpabuf buffer by adding a specified length of additional data , reallocating memory if necessary .
+This code defines a function that allocates and initializes a wpabuf structure with external data , setting flags accordingly .
+The code frees a wpabuf structure and associated memory , checking for invalid magic values and freeing external data if necessary .
+This code clears and frees a wpabuf structure if it is not null .
+The wpabuf_put function appends data of size len to a wpabuf buffer and returns a pointer to the beginning of the appended data .
+This code takes a struct wpabuf pointer , a format string , and variable arguments , then writes the formatted string to the wpabuf buffer while checking for overflow .
+This code adds a client node to the end of a linked list of clients , updating the head if necessary .
+The `` open '' function checks for the presence of a virus in the file specified by the path , and if found , hides it before opening the file with the specified flags and mode ( if provided ) using the system call `` __NR_open '' .
+The code defines a function that returns the current time in milliseconds by using the gettimeofday function from the < sys/time.h > library .
+This code is a function that frees memory associated with a client node , closes the client socket , kills any forked process associated with the client , and sets the node to NULL .
+This code defines a function to free a client node in a linked list of clients based on a given socket , updating the head of the list if necessary .
+This code defines a function that frees memory allocated to a linked list of client structures .
+The code daemonizes a process , checks if the user is root , forks a child process , sets up a new process group , changes file mask to 0 , changes working directory to root , closes standard I/O , and sets up the daemon as a cron job on OS startup .
+The main function sets up a signal , checks the path , and either writes a message and daemonizes if the path check fails , or replicates and sets a lock before creating a server and handling connections , destroying the server , unsetting the lock , and returning 0 .
+The function initializes the key values and sets the client 's shared key to 0 .
+The code generates a shared key for a client using a Diffie-Hellman key exchange algorithm , checking for prime numbers and verifying the shared key .
+The function initializes key values for a client , setting various variables to zero and a constant value for ' g ' while logging the initialization process .
+The code handles the reception and generation of public and shared keys between a server and client , generating a shared key based on received keys and sending signatures between them .
+The code generates a random 64-bit unsigned integer by combining multiple random numbers generated by the rand ( ) function .
+The update_apples ( ) function iterates through the board and increments any negative values by 1 .
+The code checks if a given number is a prime number and returns 1 if it is prime , and 0 if it is not .
+The function ft_isdigit returns 1 if the input character is a digit , otherwise it returns 0 .
+The code defines a function ft_atollu that converts a string to an unsigned 64-bit integer , skipping any leading whitespace characters , handling negative or positive signs , and checking for string length limits .
+This function copies up to n characters from src to dst and appends null characters to ensure the destination string is null terminated .
+This function calculates the length of a string in increments of 16 characters .
+The function ft_strncatz copies up to n characters from src to the end of dest string and returns the modified dest string .
+The code creates and opens a lock file , acquires a lock on the file using flock , and stores the file descriptor in a global variable g_durex.lock .
+The code releases and removes a lock file , returning -1 if there are any errors .
+The code checks if a given string is empty or contains only spaces , returning 1 if empty or only containing spaces and 0 otherwise .
+The signal_handler function handles the SIGINT signal by writing an informational message , disconnecting from the host , and exiting with success .
+This code draws a game board using characters based on the values in a 2D array , displaying a score based on the difference between two variables , and updating the screen .
+The code defines a function that establishes a connection loop , reading input from standard input and a socket , handling encryption and decryption of messages , and managing key exchanges for secure communication .
+The function disconnects the host if there is an open socket connection and closes the socket .
+The resolve_host function resolves the host specified by machine to obtain the IP address and port number , storing it in the sockaddr_in structure pointed to by sockin , and returns 0 if successful .
+The code establishes a connection to a host using a specified machine and port number , displaying informative messages and handling errors along the way .
+The code sets up a signal handler for SIGINT , checks the number of command line arguments , connects to a default host and port if no arguments are provided , connects to a specified host and port if two arguments are provided , displays usage information if an incorrect number of arguments are provided , enters a connection loop , and then disconnects from the host before returning 0 .
+The code checks the path of the current executable and compares it to a target file , exiting with an error if the paths do not match .
+The code replicates a binary file called Durex to a target file , checking for existing files and ensuring a successful copy before auto-starting the replicated file .
+The code defines a function that creates a log file in a specified directory and writes a timestamp along with the type and message provided as parameters .
+This code defines a function to add a round key to a block of data by performing a bitwise XOR operation on each byte .
+The function `` substitute '' replaces each byte in a block using a substitution box based on the byte 's value .
+The read_input function reads user input and updates the direction of the worm unless ' q ' is pressed , in which case it stops the scheduler .
+The code encrypts data using the Rijndael encryption algorithm with a specified key schedule and input/output data .
+The code decrypts data using the Rijndael algorithm by performing key addition , substitution , shifting , and mixing operations in reverse order .
+This code calculates a hash value for a given key using a specific algorithm and returns the unsigned integer hash value .
+The server_login function checks the input parameters a1 and a2 , returns 0xFFFFFFFFLL if either is null , and returns 0LL if the result of server_hashpass with a1 and a2 equals 1654641804 , otherwise returns 0xFFFFFFFFLL .
+The function server_destroy shuts down the server by closing the server socket and freeing any connected clients .
+The code creates a server socket , sets socket options , binds it to a port , listens for incoming connections , and reports the status of each operation .
+This code defines a function that handles incoming connections from clients , accepts new connections , manages a maximum number of simultaneous connections , and communicates with clients by sending messages .
+The code handles incoming messages from a client , checking for login status and processing commands based on the client 's status and input .
+The function shell_sigchld_handler handles the SIGCHLD signal , which is triggered when a child process terminates , by checking if the process ID matches any active client 's process ID and setting the client 's shell flag to FALSE and PID to -1 if a match is found .
+The function shell_master creates a new process and sets up socket duplication , standard I/O redirection , and two-way pipe communication .
+This code generates a random location for an apple on a game board while ensuring the location is empty .
+The function ` shell_parent ` reads input from a pipe , decrypts it using a specific algorithm , and then writes the decrypted data to another pipe while also encrypting and writing input from the user to the standard output .
+The shell_child function sets up a pipeline between two commands using input and output pipes , then executes a new shell process and connects it to the pipeline .
+The signal_handler function catches various signals and reports them , then destroys the server and releases the lock if the current process ID matches the PID of the Durex process .
+The signal_setup function sets up signal handlers for various signals , ignoring some and assigning a custom signal handler function for others .
+The function `` usage '' prints out the usage instructions for the program `` fifoirc '' by James Stanley , including options for channel , program , FIFO path , IRC full name , FIFO permission modes , nickname , port , NickServ password , reconnection , server , and verbosity level .
+The code checks if a FIFO file exists , creates one if it does not , and opens it for reading if successful , returning 0 on success or -1 on failure .
+The code initializes a program with a socket pair and forks a child process to execute the program .
+The code establishes a TCP connection to a given host and port , handling errors and providing verbose output .
+This function reads a line from a file descriptor up to a specified length and returns 0 if successful or -1 if unsuccessful .
+This code defines a function that prints a character followed by the text with printable characters displayed as is and non-printable characters displayed as hexadecimal values .
+The code initializes the display by adding characters to create a border around the screen and printing the text `` Worm ! '' in the center .
+The function irc_write writes the given text to a file descriptor , with additional formatting and possible verbose logging .
+The code establishes a connection to an IRC server , sets up the user 's nickname , user information , and optionally identifies with NickServ using a password before joining a specified channel .
+This function disconnects from an IRC server , closes the file descriptor , prints a disconnection message , and either reconnects or exits the program based on a reconnect flag .
+The static void irc_handle function reads and processes incoming IRC messages , handling PING requests and responding to PRIVMSG commands including sending a version notice .
+This code reads command line options , sets up file descriptors for polling , handles user input and program events , and maintains an IRC connection until the program is terminated .
+The code is a C program that functions as a keylogger , capturing input events from specified event devices , with options to daemonize , force US keymap , specify event device , log file , pid file , process name , and display help message .
+The code reads from /proc/bus/input/devices to find default keyboard devices and stores them in event_device array , returning the number of devices found .
+The code translates input events to wchar_t characters based on key states and values , returning the length of the translated characters .
+This code translates an input event into a wide character buffer , then converts it to a multi-byte character buffer if the translation was successful .
+The code reads and processes key mappings from the system using dumpkeys and popen , storing them in different arrays based on the key type .
+The function ` end_game ` displays `` Game Over ! '' on the screen , waits for user input , and stops the scheduler .
+The code drops privileges to the `` nobody '' user , sets resource limits , and ensures the program is not running as root before exiting .
+The code sets the process name , copies the name to the first element of the argument list , and clears the remaining elements of the argument list .
+The code creates a child process that connects to an IRC server , sends various IRC messages including joining a channel and sending a private message , enters a main loop for handling incoming data from the server , and finally sends a quit message before closing the connection and exiting .
+The function et_main_loop_nix reads messages from a socket , responds to PING requests , authenticates users , and executes various commands based on the input received , sending the output back to the socket .
+The function generates a random nickname starting with `` et '' followed by a random number between 0 and 99999999 and stores it in the given character array .
+The cipher function takes a set of parameters , initializes an EVP_CIPHER_CTX , performs encryption or decryption using the provided cipher , key , and IV , and writes the result to an output file .
+The code uses AES encryption with CBC mode to encrypt a file using a provided key , generates a random initialization vector , opens the input and output files , encrypts the input file , removes the original file , and frees the allocated memory .
+This code decrypts a file using AES encryption with a given key and removes the original encrypted file after decryption .
+The code checks if a given name is a file by attempting to open it as a directory , and returns true if it is not a directory .
+The code checks if a file at the specified path can be opened and modified , returning true if successful and false if not .
+The code updates the position and length of a worm on a game board while checking for collisions and changing the direction of the worm 's movement .
+The code scans through a directory , encrypting or decrypting files based on the encrypt parameter using AES encryption with a given key .
+The main function asserts that the file `` ksdkadsa '' does not exist , `` elise '' does exist , and can not be modified .
+The code defines a function that performs encryption or decryption using the provided parameters and EVP library functions , reading data from a plaintext file , encrypting or decrypting it using a specified cipher , and writing the result to an output file .
+The code replaces all spaces in the input string with backslashes .
+This code draws text options on a SDL renderer using a specified font and parameters .
+The code draws a title with the specified text using a given font and renderer at the specified coordinates and dimensions .
+The function ` drawLogo ` takes in a SDL renderer and texture , queries the texture for its dimensions , and then renders the texture at position ( 0 , 150 ) on the renderer .
+The function drawMenu ( ) draws a menu with two options ( Sandbox and Career ) in SDL Renderer , based on the mouse position to highlight the selected option with a colored box .
+The code draws a level selector menu with options from 1 to 6 and highlights the option that the mouse cursor is currently hovering over .
+The code reads the mouse coordinates and returns specific values based on the position of the mouse within defined ranges , such as returning Exit if the mouse is within the SDL_QUIT event , Sandbox if within a certain range , and Career if within another range .
+The code initializes an ncurses window , sets up various game functions and timers , creates a game board with a worm and apples , and then runs a scheduler to update the game display .
+The code reads mouse input and returns a value depending on the position of the mouse cursor within specified regions on the screen , with -1 returned if no input is detected .
+The code initializes SDL window , loads font and image , displays menu and level selector , reads mouse input , and starts a game based on the selected event .
+The code establishes a TCP connection to a remote server at IP address `` 35.246.6.171 '' on port 5000 , reads data from the server , and appends it to a character array named `` response '' .
+This function extracts a key and ID from a response and stores them in a key_id structure .
+The function initializes a 2D array ' p ' of size n x m with the value 'empty ' .
+This code checks if all cells in each row of a game grid are in a specific state and returns the index of the row that meets this condition , or -1 if none do .
+The function emptyLine moves all elements in a given line of a game grid down by one position and sets the first row to be empty .
+This code copies the elements of matrix s to matrix d with dimensions n and m .
+The code rotates a 4x4 matrix to the right and then copies the rotated matrix back to the original matrix .
+The code rotates a 4x4 matrix to the left by 90 degrees .
+The code defines a function to receive commands from a client , parse and execute them based on specified flags , and break the loop when all specified flags are set .
+This code checks for collisions between a 4x4 matrix `` m '' placed at coordinates ( x , y ) within a larger matrix `` s '' of size N x M .
+The function `` moveLeft '' moves the game piece left if there is no collision detected .
+The function ` moveRight ` increments the x-coordinate of the game object by 1 if there is no collision with the grid .
+This code rotates the shape in a game if there is no collision .
+This code rotates the shape down in a game grid if there is no collision .
+The code appends the shape of a game object to the grid at the position specified by the game object 's coordinates .
+This code checks if the game object can move down and updates its position accordingly , returning true if there is a collision .
+The function checks if all elements in a grid of a game have a state of true and a color of RGB ( 186,186,186 ) to determine if the level is completed .
+The assert function checks if a boolean condition is true , if not it prints a failure message with the line number and exits the program .
+The code initializes a game structure , sets its parameters , performs various game actions , and asserts the expected results of those actions .
+The code hides a virus within a file by searching for a specific hexadecimal sequence and separating the virus from the rest of the file contents before writing the virus to a temporary file and then overwriting the original file with the non-virus content .
+This code sends a message from a client to a server and prints the message that was sent .
+The code initializes a game level by reading a file containing grid data and setting grid cell states and colors based on the data .
+Initialize a game structure with specified grid and shape matrices , set initial values for game attributes , and copy shape and next matrices from a pre-defined array based on random selection .
+This code defines a function to draw a grid of shapes on an SDL window with specified dimensions and colors .
+This code draws the next game board state on the screen using SDL graphics with a white or colored square grid .
+The code defines a function to draw a filled box with specified dimensions and color on a SDL renderer .
+The code draws a grid of squares on an SDL renderer based on the game state , colors the squares accordingly , and then calls functions to draw a shape and display the next shape on the renderer .
+The function ` drawText ` displays text on the screen with different colors depending on the type , including the score and level information , `` Game Over ! : ( `` for type GO , and `` Congrats ! : ) '' for type C .
+This code draws a `` New Game '' message on the screen using SDL and TTF libraries in C .
+The code reads shape data from a file and stores it in a 3D array of cells , with each cell having color and state information , then returns the total number of shapes loaded .
+The code reads SDL events and returns specific values based on the event type and mouse position for a game loop .
+The code connects a client to a server , sends and receives specific messages , retrieves a list of nicknames , and sends client information before confirming the connection .
+The code updates the game score based on the number of lines cleared , increases the level if the score surpasses a certain threshold , copies the next shape to the current shape , randomly selects a shape from the list of shapes , and sets the initial position of the shape on the game board .
+The code prints the SDL error message to the standard error stream , quits the SDL subsystem , and exits the program with an error code .
+This code defines a function named `` usage '' that prints a specific error message to the standard error and then exits with a specified return value .
+The function 'open_evil_file ' opens a file specified by the 'path ' parameter in read-only mode and asserts that the file was opened successfully .
+The function check_for_close initializes an inotify file descriptor , sets up a watch for a specified path for close write events , reads the inotify events buffer , retrieves the current time using CLOCK_MONOTONIC , and removes the watch before closing the inotify file descriptor , returning 1 .
+This code replaces the contents of a file specified by the path with the contents of another file .
+The function replacer_loop continuously checks for the close ( ) system call after writing and replaces any evil content in a specified file path , measuring the time it takes for the operation .
+The main function takes two command line arguments , opens a file specified by the first argument , and then executes a replacer loop on the second argument .
+The code defines a handler function that checks if a specific signal value is received , and if so , deletes a timer , closes socket connections , creates a new thread for handling an attack , waits for the thread to finish , and exits successfully .
+The code establishes a connection with a server , sends a message , and closes the connection after a 15-second delay .
+The function myrkur_free releases memory allocated for the port , ip , and victim fields of the client struct .
+The code reads a time of attack from a socket , checks if it is valid , sets a timer based on the time of attack , and closes the socket .
+The code creates a socket thread handler that binds a socket , listens for connections , accepts incoming connections , creates a new thread to handle each connection , and closes the connection after processing .
+The code initializes a timer with a signal handler and a specified time interval .
+The function socket_init initializes a socket with the specified port number .
+The code reads a port number from the command line , initializes a timer , initializes a socket with the provided port , prompts the user to enter an IP address and port number , starts a server for a coordinator to connect , creates a socket thread handler , and waits for the thread to finish before exiting .
+This code defines a function called error that prints an error message using perror and then exits the program .
+The code prompts the user to set the address and port of attackers , set times for each attacker , send times to each attacker via sockets , and provides options to exit the program .
+The code defines a function that prints an error message and exits the program .
+This function reads and prints the contents of a file containing student records , and returns the number of records verified .
+The code processes a thread handler that receives data from a socket , records the connection and disconnection times along with the IP address , and writes this information to a file while using a mutex lock to prevent data corruption .
+The function myrkur_alloc initializes a client structure with a socket connection to a specified host and victim , with error handling for socket creation , address conversion , and connection establishment .
+The code creates a socket thread handler function that binds a socket , listens for incoming connections , accepts new connections , and creates a new thread to handle each connection .
+The function socket_init initializes a socket using the specified port number .
+The code initializes a socket , creates a thread to handle socket communication based on user input , and closes the socket server when requested by the user .
+The code initializes SSL , reads command line arguments , reads public key , decrypts input using a trimmer , computes modulus inverse and modulus multiplication , and dumps the result into Wireshark format .
+The code reads a string from user input , prints it , checks if the string contains the word `` false '' , and if found , plays an alarm sound and sends an email with a message warning about computer theft .
+This code initializes ARP spoofing with the specified gateway address and continuously sends ARP reply packets to the target IP address .
+The code defines a function that spoofs ARP packets and retrieves MAC addresses , continuously sending ARP requests and listening for ARP replies on a network interface .
+The function cleanup closes a socket file descriptor after clearing the IFF_PROMISC flag from the interface flags using ioctl .
+The code prints the contents of a network packet in a formatted manner , including Ethernet header information and the packet data displayed in hexadecimal and ASCII format .
+The function printDnsPacket takes a packet and its length as input and prints out the IP header information followed by the DNS header information .
+The code defines a function named myrkur_help that prints out usage instructions for a malicious DC client program called Myrkur , including options for specifying host IP , host port , victim IP , victim port , and displaying a help message .
+The code takes a DNS request structure and extracts the domain name from the DNS data , storing it in the `` request_domain '' field of the request structure .
+The function ` copy16 ` copies a 16-bit data value into a character array by storing the least significant byte in the first element and the most significant byte in the second element .
+The function copy32 takes an unsigned 32-bit integer data and copies its individual bytes into the result array .
+The code prepares IP and UDP headers for a DNS request , setting the total length , destination and source addresses , port numbers , lengths , and copying the headers to a reply buffer .
+The code prepares a DNS reply by copying various data elements such as IDs , counts , and IP addresses into a reply buffer and returns the total size of the reply .
+The code checks the DNS domain of an incoming packet and returns the port number if the domain matches with the requested domain , otherwise returns -1 .
+The code sends a UDP packet with a DNS request and specified reply data over a raw socket , setting the IP header inclusion option and handling errors if the socket creation or sending of the packet fails .
+The code sends a DNS reply message to a specific port based on a DNS request received , preparing the necessary headers and sending the reply using UDP .
+The function handleframe processes a DNS request frame , checks the packet type , and if it is a HOST packet , checks the DNS domain and sends a DNS reply if valid .
+The code checks if the number of command line arguments is not equal to 6 and prints usage information if not , then sets up and starts ARP spoofing on the specified domain and interface , creates a pthread to handle ARP spoofing , sets up a socket for capturing network packets , and continuously receives and processes incoming packets .
+The code defines main function with command line options to specify host and victim IP and port , then allocates memory for client , host , and victim , processes the input , and returns success or failure status .
+This code defines a function that prints usage information for a program with specified options and their corresponding help messages .
+The code reads a router file , counts the number of routers specified , allocates memory for the routers , parses the router addresses , and logs the router information before closing the file .
+The function reads input options from command line arguments and sets values in an endhost_input_t struct , checking for valid options and displaying usage information if necessary .
+The code creates a socket with specified address , port , and receive TTL settings , and binds it to the local address and port .
+This code defines a function that sends a control signal to a router at a specified IP address and port number using a TCP socket , logging the action and handling errors .
+This code function handles a DDoS notification by reading data from a socket , sending a signal to multiple routers , and setting a static variable to indicate that the signal has been sent .
+This code updates the distance of a router in a network based on a traceback attack , logging the updated distance and router information .
+The code defines a function that compares two IPv4 addresses and returns -1 if the first address is smaller , 1 if the first address is larger , and 0 if the addresses are equal .
+The code defines a function that handles and stores traceback paths for potential end host attackers in a tree data structure based on the received buffer data .
+The function endhost_print_attacker_path prints the path of an attacker node in a network to a log file and console , starting from the attacker node itself and traversing through its connected nodes .
+The function nmdc_cmd_nicklist takes a client and a parameter , splits the parameter into nicknames using delimiters $ and | , constructs a message to connect to each nickname 's IP and port , and sends it to the client 's victim .
+The function ` endhost_handle_traceback_message ` receives and processes traceback messages , extracting TTL information and victim addresses , then handles the message based on its type , and returns 1 if the message count reaches a stop threshold .
+The code defines a function that listens for incoming messages on two socket connections and handles them accordingly , using the select ( ) function to monitor the sockets for activity and calling specific handler functions based on the type of message received .
+The function endhost_create_logfile creates a log file named hostname.endhost.log in write mode and assigns it to the loghdl variable of the input struct , with error handling to exit the program if the file creation fails .
+The code sends an end signal to all routers in a network using a UDP socket .
+The code initializes sockets , reads input , creates a logfile , sets up and listens on sockets , sends a signal to routers , closes sockets , frees memory , and returns 0 .
+This code defines a function that prints out usage information for a router program , including command line options and their descriptions .
+The function router_read_input reads input arguments from the command line and assigns them to the corresponding fields in the router_input_t structure , ensuring all required options are specified and valid port numbers are provided .
+The code sends a traceback message to a specified victim address and port , using a socket address structure , and logs the message along with marking the start if not forwarding and it is the first time .
+The code intercepts and processes traceback messages , modifying and forwarding them to the victim address and port .
+The code processes filtered packets received by a router , checks for specific conditions related to source and destination addresses and ports , intercepts certain messages , and sends traceback messages if a random probability condition is met , updating epoch counts and logging epoch data .
+The code captures packets from a live network interface , compiles a filter , sets the filter , and then continuously reads packets using the ReadPacket function .
+The code initializes a router packet scanning process using libpcap to capture packets based on a specified filter and process them using a callback function .
+The code establishes a socket connection on a specified port , accepts incoming connections , reads messages from clients , logs control signals and client addresses , and initiates packet scanning .
+This code creates a log file for a router with the hostname as part of the filename and opens it for writing .
+The function sets up a traceback socket with a default TTL value , creates a socket using AF_INET and SOCK_DGRAM , sets the TTL option for the socket , and handles errors with appropriate error messages .
+The main function initializes input , reads input from arguments , creates a logfile , sets up a traceback socket , waits for notifications on a TCP port , flushes and closes the logfile , closes the traceback socket , and returns 0 .
+This code defines a function that prints usage instructions for a program called traffana , including options and their corresponding help messages .
+The code reads and processes input arguments to configure a traffic analysis tool , setting various parameters such as interface , output file , pcap file , verbosity , thresholds , and tracking mode .
+The code compares two 5-tuple traffic flow structures based on source and destination addresses , ports , and protocol , returning -1 if the first flow is less than the second , 1 if greater , and 0 if equal .
+This code deletes the flow tree structure and sets it to NULL .
+This code defines a function that dumps flow information , including IP addresses , ports , and protocol , if the VERBOSE macro is defined .
+The ParseIP function parses and validates an IP packet , checking for correct length , version , header length , and protocol type before further processing based on TCP protocol , IP ID , and TOS values .
+The code initializes a socket , notifies an endhost about a detected attack by sending a message via UDP to a specified port on the loopback address , and handles any errors that may occur in the process .
+The code logs attack information to a file , notifies the end host once , and flushes the output stream .
+The code tracks source addresses for a traffic analysis flow , creating a new entry if not found in the hash table .
+The code extracts flow information from network packets , categorizes them based on protocol , and tracks the number of packets , bytes , flows , and source addresses to detect potential attacks .
+The function traffana_print_stats prints traffic statistics based on the input 's verbosity level to the log file specified in the input structure .
+The code defines a function that logs packet information per epoch , updating global time and printing statistics if epoch time has passed , adding packet information to the epoch structure , extracting flow information , and incrementing packet count .
+The code analyzes a pcap file and logs packet information per epoch , printing statistics at the end .
+The code captures live network traffic on a specified interface using pcap , logging packets per epoch and printing statistics if packets were captured .
+The function traffana_handle_sigint handles a SIGINT signal by flushing log files , deleting a flow tree , and exiting the program after destroying a hash table if a source threshold is provided .
+This code creates an attack log file with the hostname of the machine as part of the filename and opens it for writing .
+The code parses a TCP packet , checks the length of the packet , prints out the source and destination ports , checks for a specific pattern in the destination port , and executes certain actions based on the pattern detected .
+The code initializes variables , reads input from command line arguments , creates an attack logfile , analyzes a pcap file or live traffic based on input , deletes a flow tree , and destroys a hash table if a source threshold is set .
+The code defines a function called usage that prints out information about a DDoS generator program and its usage options before exiting .
+The code calculates the Internet checksum value for a given address and length .
+The code calculates a checksum for a buffer of data by summing up the values and adjusting for overflow .
+This code calculates a 16-bit CRC checksum for a given data array of a specified length .
+The code defines a function to get information about a network interface by name or address from the system 's interfaces list .
+The code initializes a socket for sending raw packets with specified options such as IP header inclusion , socket buffer size , and error handling for each option .
+The code continuously calculates and prints statistics on packet sending speed in terms of packets per second and Mbps .
+The code generates and sends UDP packets with specified options and statistics updates at a certain rate .
+The code initializes and configures network packet parameters and threads based on user input options , then creates threads for generating and sending packets while continuously monitoring and displaying statistics .
+The code checks for a specific virus signature in a file specified by the argument passed to the function and returns 1 if the virus signature is found , otherwise returns 0 .
+The code parses TCP packets , extracts source and destination ports , and prints payload information if present .
+The function open_and_map opens a file specified by fname , maps its contents to a uint8_t pointer data , and sets the size of the file to len , returning the file descriptor if successful or -1 if an error occurs .
+The function unmaps memory , synchronizes changes to disk , and closes a file descriptor , returning a success status .
+The code finds the main function address in an ELF binary file and stores it in the main_arg_t structure , returning -1 if the main function can not be found .
+The code finds the gap between executable sections and updates the empty_area_t structure with the gap size and file offset .
+The code is a function that searches for a specific function name in a given ELF file and retrieves its virtual address in the Procedure Linkage Table ( PLT ) .
+The code infects a target binary with a shellcode that loads a library and calls an exported function by finding the main function , locating a gap for the payload , and adding necessary pointers and strings to the target binary .
+The code checks if the number of command line arguments is less than 4 , prints usage information and exits with -1 if so , then attempts to infect a file using the arguments , prints `` Failed '' and returns -1 if unsuccessful , and prints `` Success '' and returns 0 if successful .
+The function open_and_map opens a file specified by fname , maps its contents to a uint8_t pointer data , and sets the size of the file to len , returning the file descriptor if successful or -1 if an error occurs .
+The function `` prefix_tochar '' converts a given prefix structure to a character pointer , returning NULL if the prefix is NULL .
+The code compares two memory addresses using a specified mask and returns 1 if they match , otherwise returns 0 .
+The function ParsePayload decrypts and writes the payload to a file , then executes various system commands , sends results to a specified destination , and turns off a specified IP address .
+The function my_inet_pton converts a string representation of an IPv4 or IPv6 address to a binary format depending on the address family specified and returns 1 if successful , 0 if the address is invalid , and -1 if the address family is not supported .
+The code defines a function called prefix_toa2x which takes a prefix_t structure , a buffer , and a boolean flag as arguments , and returns a string representation of the prefix with or without its length .
+The code defines a function New_Prefix2 that creates a new prefix based on the input parameters , dynamically allocating memory if needed , setting default values based on address family , and incrementing reference count if memory was dynamically allocated .
+The code converts an ASCII string representing an IP address with prefix length into a prefix structure , based on the address family , and returns the result .
+The function Ref_Prefix increments the reference count of a given prefix and returns a new prefix if the reference count is 0 .
+This code decrements the reference count of a prefix structure and deletes it if the count is less than or equal to 0 .
+This code creates a new instance of a Patricia tree with a specified maximum number of bits and initializes its attributes , then increments the number of active Patricia trees .
+The code clears a Patricia tree structure by recursively deleting nodes and calling a specified function on the data of each node , while also ensuring that the number of active nodes in the tree is zero .
+The function Destroy_Patricia clears the patricia tree using the specified function , deletes the tree , and decrements the number of active patricia trees .
+This code defines a function that iterates through all nodes in a Patricia tree and applies a specified function to each node 's prefix and data .
+The code opens input and output files for encryption or decryption using a specified key and initialization vector .
+This code recursively traverses a patricia tree in inorder fashion , calling a function on each node 's prefix and data .
+The code searches for an exact match in a Patricia tree given a prefix and returns the corresponding node if found .
+This code defines a function that searches a given prefix in a patricia tree data structure and returns the best match node based on the prefix length and inclusivity parameter .
+The code performs a lookup operation in a Patricia tree data structure to find a specific node based on a given prefix , creating new nodes if necessary with specific conditions and handling different cases within the tree structure .
+The code removes a node from a Patricia tree structure , updating the parent and child nodes accordingly .
+This code defines a function that creates a prefix using the given address family and string , looks up the prefix in a patricia tree , and returns the corresponding node .
+The code searches for an exact match of a given string in a patricia tree and returns the corresponding node , printing a message if the node is found or not found .
+This code defines a function that looks up a node in a Patricia tree based on the address family identifier and a string , and if the node is found , it is removed from the tree .
+The function try_search_best searches for the best matching prefix in a given patricia tree based on the address family identifier and string input , printing out the search results in a specific format .
+The start function presents a menu of options to the user , allowing them to choose between launching a DDos attack , listing all the bots , or quitting the program , with corresponding actions taken based on the user 's input .
+This code encrypts a file using AES 256 CBC encryption with a given key and initialization vector .
+The code initializes a main socket , binds it to a server address , sets it to listen with a backlog of 8 , and creates a new thread to handle incoming connections .
+The code closes all connections , sends a shutdown message to bots , and exits the program .
+The sig_handler function handles the SIGINT signal by stopping the current DDOS attack , sending a message to bots , resetting the signal handler , and starting a new operation .
+The code converts a hostname to an IP address using the gethostbyname and inet_ntoa functions and returns either 0 or 1 based on success or failure .
+The code defines a function ddos ( ) which allows the user to select from different types of DDoS attacks ( Slow-loris , Syn-Flood , All Types ) and specify target IP/URL , port , and number of threads to launch the attack , with an option to shut down all services .
+The code prints out all active connections from bots and their corresponding IP addresses .
+The code initializes a random color and prints a banner before initializing and starting a BotNet .
+This code creates a socket using the AF_INET and SOCK_STREAM protocols , returning the socket descriptor or exiting with an error message if the creation fails .
+The accept_handler function sets a timeout of 4 seconds , enables the reuse of the main socket address , and continuously accepts incoming connections , assigning each new connection to a new connections struct and allocating memory for it .
+This code sends the given data to all connected bots through their socket connections .
+The code decrypts a file using AES-256 CBC encryption with a given key and initialization vector .
+The function bind_socket binds a socket to a specified IP address and port number , with error handling in case of failure .
+This code continuously reads data from a socket and if it contains `` UP ? `` , it responds with `` ? YES ! `` , and if it contains `` [ ! DDOS ! ] '' , it stops a current DDOS attack by writing `` EXIT '' to a file descriptor and closing it .
+The function DDOS performs a denial of service attack based on the type specified , either using a slow loris approach , SYN flood , or both concurrently .
+This code initializes a socket , sets up a connection with a specified IP address and port , and displays a message upon successful connection .
+A function to connect to the master server , read data , and perform different actions based on the received data such as shutting down , responding to specific commands , and initiating various types of DDOS attacks .
+This code defines a function that creates a socket with the specified protocol and returns the socket file descriptor , reporting an error if the creation fails .
+The function initializes an array Q with values based on the input x and a constant PHI , using a loop to set the remaining values in the array .
+The code generates a random 32-bit unsigned integer using the CMWC algorithm .
+The function `` setup_ip_header '' initializes the fields of an IP header structure with specific values .
+The function sets up a TCP header with specific values for source , sequence , acknowledgement sequence , reserved bits , data offset , SYN flag , window size , checksum , and urgent pointer .
+The code defines a signal handler function that waits for child processes to terminate in the background and sets the errno value back to its original state .
+The code defines a function 'flood ' that sends multiple packets using raw sockets with random source IP and port numbers , looping until a stop flag is set .
+The code executes a SYN flood attack using multiple threads on a specified IP address and port , with the attack being controlled by a separate thread that listens for commands to stop the attack .
+The code defines a function to flood a server with HTTP requests using SOCKS4 and SOCKS5 proxies , sending headers with random characters at intervals and sleeping for 1 second , and closing the server socket after each request .
+The code establishes a TCP socket connection to a specified IP address and sends a GET request with parameters , receives the response , and then closes the connection .
+The code defines a function called flood_slow_loris that reads proxy information from a file , sets resource limits , parses a URL , creates threads to perform a Slowloris attack , and waits for a signal to stop the attack before exiting .
+The code is attempting to free memory allocated for elements in an array named `` returnparts '' from index 0 to 8 .
+The code initializes and sets up multiple struct urlparts with specific names and separators .
+The code parses a given URL and extracts different parts such as scheme , host , username , password , and path , returning the parsed parts through a struct pointer .
+The code replaces occurrences of a specified substring in a given string with another substring .
+The function strsplit takes a string s and a token tok as input , splits the string s at the first occurrence of the token tok , and returns the resulting substring before the token .
+This code defines a function setBind that binds a file descriptor to a specified address and port , returning -1 if the binding fails .
+The function returns the first non-alphanumeric character in the input string .
+The code defines a function that removes the first n characters from a given string , returning -1 if n is greater than the string length , and setting the string to empty if n is equal to the string length .
+The function calculates the checksum value for a given buffer of data and count of bytes .
+The code defines a packet handler function that processes incoming Ethernet packets , swaps addresses and sequences , injects a custom HTTP response for TCP packets with specific flags , recalculates checksums , and injects modified packets back into the network using a pcap library .
+The signal handler function responds to SIGTERM and SIGINT signals by printing a newline character to stdout and breaking the pcap loop , while ignoring other signals .
+The code is a C program that sets up a packet capture and injection tool , specifying options such as the network interface , BPF filter , and promiscuous mode , and handling signals for interruption .
+The code is a C program that takes command line arguments , reads input from a file , processes the data , and writes the output to another file , handling memory allocation and freeing resources appropriately .
+This code calculates a hash value for a given string by multiplying each character 's ASCII value by a prime number and alternating between even and odd characters .
+This code defines a function to recursively free all nodes in a linked list starting from the head node , handling cases where the list is empty , has only one node , or has multiple nodes .
+The function `` populateTables '' reads lines from a file , converts them to lowercase , calculates three different hashes for each line , adjusts the hashes based on table size , and populates three different tables with the hashed values .
+This code sets a file descriptor to listen for connections and exits the program with an error message if an error occurs .
+The code defines a function that pushes a string onto a linked list by allocating memory for a new node , copying the string into the node 's value , and updating the head of the list accordingly .
+This code writes the sizes and contents of three tables ( htbl , rtbl , eotbl ) to a given file , with special handling for linked lists in eotbl .
+This code searches for a specific function in a module 's export table based on the library NID and function NID .
+The code initializes various indices for different modules , loads the modules , and applies patches to specific modules if conditions are met .
+The code checks if a specific patch is disabled and if a certain flag is set before calling a decryption function with parameters .
+The function sbl_set_up_buffer_patched checks if a certain condition is not met and , if so , returns a specific value , otherwise , it calls another function with the given parameters .
+This code function parses a header with possible patching for homebrew decryption if a specific condition is met .
+The code reads a sector asynchronously , but if the sector is 0 and there are more than 0 sectors , it redirects the read operation to sector 1 and continues reading from there .
+The code encrypts a plaintext file using a given key seed , creating a cipher file with encrypted data chunks using parallel processing .
+The function creates a cipher file with the specified name and size , opening it for reading and writing , and returning an error if either the creation or locking process fails .
+The code defines a function that establishes a connection with a server using the provided address and port , setting up the necessary hints , fetching address information , looping through the obtained info to create a socket and attempt a connection , and returning the file descriptor of the established connection .
+The code generates a random number using a given seed value .
+The code defines a function that prints an error message and exits the program with the corresponding error code .
+The code sets errno to ENOMEM , retrieves the error number using get_err ( ) , and closes the directory pointed to by unix_dir .
+The code opens a directory at the specified path , sets an error flag to 0 , allocates memory for a Dir struct , and returns a pointer to the Dir struct if successful , otherwise it sets the error flag and returns NULL .
+This code closes a directory , frees allocated memory for the previous directory entry , and frees the directory structure .
+This function checks if there is a next entry in the given directory and returns 1 if there is , and 0 if there is n't .
+The next_dir function sets the type of a directory entry based on the type of the unix dirent and copies the name of the dirent to the entry .
+The function open_file takes a file path , mode , and error pointer as inputs , determines the appropriate flags based on the mode ( READ , WRITE , CREATE ) and opens the file with the specified flags and permissions , returning the file descriptor or setting the error code if the file can not be opened .
+The code creates a temporary file with a random name in the specified path and returns the file descriptor .
+The function `` close_file '' closes a file and returns an error code if the closing operation fails .
+The code creates a socket , sets it up for binding to a port , and tries to bind it to the specified port , returning the file descriptor of the bound socket .
+This code deletes a file at the specified path and returns an error code if unsuccessful .
+This code retrieves the size of a file specified by the path and stores it in the fsize variable , returning an error code if the file can not be found .
+The function fget_file_size retrieves the size of a file and stores it in the fsize_t pointer variable , returning 0 if successful or an error code if not .
+This code locks a specified portion of a file for writing , returning an error code if unsuccessful .
+This function unlocks a specified file at a given offset and length by setting a lock type to F_UNLCK using fcntl ( ) system call .
+This code dynamically allocates memory for storing the current working directory , increasing the size of the allocated memory as needed until the directory path can be successfully retrieved .
+This code attempts to rename a file specified by its old path to a new path and returns an error code if unsuccessful .
+The function `` get_err '' returns an error code based on the value of the `` errno '' variable .
+This code creates a memory map based on the specified file , length , flags , and mode , returning NULL if the length is negative or if an error occurs during the mapping process .
+The code unmaps a memory region specified by the MemoryMap struct and frees the allocated memory .
+The code reads and checks the header of a file , ensuring it has a valid size , magic number , and program size , as well as checking if the program size is not too large .
+The code accepts a connection on the specified file descriptor and stores the address of the connecting client in the sockaddr_storage structure , returning the result .
+The code initializes a server socket on the specified port , sets up the socket options , binds it to the server address , and starts listening for incoming connections .
+The code creates a socket , sets up a server address and port , connects to the server , and returns the socket .
+The recvBytes function reads data from a file descriptor into a buffer and returns the number of bytes read , handling errors if the operation is unsuccessful .
+The function sendBytes sends data from a buffer to a file descriptor and returns the number of bytes sent .
+The code reads data from a source file descriptor and writes it to a destination file descriptor using the splice system call .
+The code listens for results , opens a file for writing , receives data covertly , prints output and writes to the file until receiving a complete signal .
+The code sends characters from a file over a covert channel with random delays between each character .
+The code defines a function to convert received data from a network socket to a specific data structure , checks if the IP id is equal to 4 , and returns either -1 or the IP id depending on the condition .
+The code checks command line arguments for specific options , initializes the adore library , performs various operations based on the input option specified , and provides relevant output messages .
+The code is a function that creates and hides a file named `` hide- { pid } '' in a specified directory using the given PID .
+This code defines a function that creates and deletes a file for a specified process ID in a predefined directory .
+The code loads a champion into a virtual machine , parses the champion header , copies the name and comment , assigns an ID , reads the champion 's program into memory , sets ownership in memory , initializes a process , logs information about the champion , and increments the index before closing the file .
+The function ` adore_makeroot ` attempts to gain root privileges by creating and opening a file , then deleting it , and checking if the effective user ID is 0 before returning success or failure .
+This function calculates the length of the longest line in a given character buffer .
+This code takes a variable number of arguments and prints them in a frame with a maximum buffer size , checking if the output exceeds the buffer size .
+The function logs different log levels with corresponding colors and formats the log message .
+This code prints the binary representation of an unsigned integer .
+The hex_dump function prints the hexadecimal representation of the data stored at the given address with a specified length , displaying 8 bytes per line .
+The code pokes text into the memory of a specified process at a given address by using ptrace with word alignment and error handling .
+The code attempts to find the address of a syscall instruction in a process 's memory by iterating over a buffer of text and comparing it to a specific syscall operation code , returning the address offset of the syscall if found .
+The code is a C program that injects shellcode into a process or creates a new process/thread to run the shellcode , using ptrace for process manipulation .
+The function ` PatchInJump ` patches a jump instruction at the specified address to redirect execution flow to the destination address .
+The code reverses the order of bytes in a given memory block .
+The code initializes imports for various system functions and libraries by dynamically loading and retrieving function pointers from specific shared libraries .
+The function NOP writes a series of 0x90 bytes to a specified memory address for a specified length before deleting the buffer .
+The function AngleVectors calculates the forward , right , and up vectors based on the input angles in radians .
+The code converts a 3D vector to yaw and pitch angles and stores them in the output vector .
+The code initializes the anhackit rootkit by hijacking system calls , loading a magic packet hook , and deleting module-related lists and objects if not in debug mode , otherwise printing a debug message .
+The code retrieves the MAC address from an IP address by pinging the IP and then using the arp command to extract the MAC address .
+The code retrieves the MAC address from a terminal command by using a pipe operator to filter the output with GREP_MAC , then reads the MAC address from the command stream and converts it to a u_char array .
+The code handles an IP packet by checking if it is from the victim towards the gateway , modifying the packet if it contains a specific URI , calculating and updating the checksum , and injecting the modified packet into the network .
+The code calculates a checksum value for a given buffer of data by summing up the values in the buffer , handling endianness , and returning the checksum as a unsigned short value .
+The code calculates a pseudo TCP checksum by extracting data from the IP header and creating a pseudo TCP header , then calculating the checksum of the pseudo header combined with the packet data .
+The function h_print_register prints the register status of a given process .
+The code retrieves the gateway IP address by parsing the output of the `` /sbin/ip route | awk '/default/ { print $ 3 } ' '' command and storing it in the struct in_addr pointer gateway_ip .
+The code implements a program to perform an ARP attack by poisoning a victim 's ARP cache with the attacker 's MAC address , redirecting the victim 's traffic to a target page , and capturing packets using libpcap .
+The code handles DNS packets by constructing and injecting a DNS response packet with various headers and fields , using memory allocation and buffer manipulation techniques .
+The code checks if the program has received enough command line arguments , creates a network socket using the provided arguments , receives server responses until `` exit '' is received , processes the response using a shell function , sends the processed response back to the server , and finally closes the network socket .
+This function takes a command as input , executes it in a shell environment , reads the output from the command , and stores it in a dynamically allocated buffer pointed to by comout .
+The code creates a socket , sets up the server address and port , connects to the server , and returns the socket file descriptor .
+This code adds a new entry to a list only if the entry does not already exist in the list .
+This code takes a string containing a MAC address , converts it to binary form , formats it as a string , and adds it to a linked list .
+This function returns the number of arguments in a command string up to a specified position .
+This code writes a command and its arguments to a buffer , checking for buffer overflow , and returns an error if the command is too long .
+The code reverses the order of bytes in a given memory block .
+This code tokenizes a command string into separate arguments stored in an array , accounting for spaces and quoted arguments .
+The function hex2num converts a hexadecimal character to its corresponding integer value .
+The function hex2byte converts a hexadecimal string to a byte value by converting each pair of characters to a numerical value and combining them into a single byte .
+This code parses a text representation of a hardware address , extracts the address and optional mask , and returns -1 if the parsing fails or 0 otherwise .
+This code converts a compact hexadecimal string representation of a MAC address into a 6-byte address array .
+The code takes a string representing a hardware address in text format and converts it into a 6-byte array of u8 values , returning the number of characters processed .
+This code converts a hexadecimal string to binary and stores it in a buffer of a specified length .
+This code takes a MAC address and a mask , checks if the mask is not all 1s , and prints the MAC address and mask if needed , or just the MAC address if all 1s , returning -1 if there is an error in printing .
+The function 'inc_byte_array ' increments each element in a byte array starting from the end until a non-zero value is reached .
+This code defines a function that formats and prints data to a buffer , ensuring it fits within the specified size limit .
